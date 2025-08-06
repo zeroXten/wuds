@@ -38,7 +38,7 @@
       text-align: center;
       max-width: 800px;
       margin: 0 auto 3rem auto;
-      color: #888;
+      color: #ccc;
       font-size: 1rem;
     }
     .content-wrapper {
@@ -166,10 +166,50 @@
     footer {
       text-align: center;
       margin-top: 4rem;
-      color: #444;
+      color: #888;
       font-size: 0.85rem;
       letter-spacing: 0.04em;
     }
+    .search-container {
+      margin-bottom: 2rem;
+    }
+    
+    .search-input {
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(135deg, #111 0%, #222 100%);
+      border: 2px solid #00ff99;
+      border-radius: 0;
+      color: #00ff99;
+      font-family: inherit;
+      font-size: 1rem;
+      box-shadow: 0 0 10px #00ff99;
+      outline: none;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    
+    .search-input:focus {
+      border-color: #ff0080;
+      box-shadow: 0 0 15px #ff0080;
+    }
+    
+    .search-input::placeholder {
+      color: #888;
+      font-style: italic;
+    }
+    
+    .no-results {
+      text-align: center;
+      color: #888;
+      font-size: 1.1rem;
+      margin: 3rem 0;
+      display: none;
+    }
+    
+    .tip-row.hidden {
+      display: none;
+    }
+    
     @media (max-width: 600px) {
       .tip-row {
         flex-direction: column;
@@ -192,314 +232,488 @@
   <h1>Wake Up<span class="green">;</span><br>Do Something</h1>
   <p class="subtitle">Your guide to thinking straight and acting real when the world gets weird.</p>
   <div class="content-wrapper">
-    <ol class="tip-list">
-      <!-- FULL LIST OF 100 TIPS STARTS HERE -->
-      <li class="tip-row" id="1" tabindex="0"><span class="tip-number">1</span>
-        <div class="tip"><span class="tip-strong">Confirmation bias</span> means you’ll believe something is true just because you already think it is - not because it is. Watch how you Google.</div>
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search tips..." id="searchInput">
+    </div>
+    <div class="no-results" id="noResults">No matches found.</div>
+    <ol class="tip-list" id="tipList">
+            <li class="tip-row" id="1" tabindex="0" data-tags="cognitive bias research google search evidence beliefs truth psychology"><span class="tip-number">1</span>
+        <div class="tip"><span class="tip-strong">Confirmation bias</span> means you'll believe something is true just because you already think it is - not because it is. Watch how you Google.</div>
       </li>
-      <li class="tip-row" id="2" tabindex="0"><span class="tip-number">2</span>
+      <li class="tip-row" id="2" tabindex="0" data-tags="media journalism clickbait engagement outrage fear misinformation news"><span class="tip-number">2</span>
         <div class="tip"><span class="tip-strong">The news cycle</span> is optimized for engagement, not accuracy. That means outrage, fear, and conflict - not context or solutions.</div>
       </li>
-      <li class="tip-row" id="3" tabindex="0"><span class="tip-number">3</span>
-        <div class="tip"><span class="tip-strong">Social media</span> shortens your attention span and raises your anxiety. The more you use it, the worse you’ll think the world is.</div>
+      <li class="tip-row" id="3" tabindex="0" data-tags="attention anxiety depression scrolling apps phone mental health addiction"><span class="tip-number">3</span>
+        <div class="tip"><span class="tip-strong">Social media</span> shortens your attention span and raises your anxiety. The more you use it, the worse you'll think the world is.</div>
       </li>
-      <li class="tip-row" id="4" tabindex="0"><span class="tip-number">4</span>
-        <div class="tip"><span class="tip-strong">Dopamine</span> is about <em>anticipation</em>, not satisfaction. That’s why you keep scrolling even when it’s not fun.</div>
+      <li class="tip-row" id="4" tabindex="0" data-tags="neuroscience addiction scrolling satisfaction reward system brain chemistry social media"><span class="tip-number">4</span>
+        <div class="tip"><span class="tip-strong">Dopamine</span> is about <em>anticipation</em>, not satisfaction. That's why you keep scrolling even when it's not fun.</div>
       </li>
-      <li class="tip-row" id="5" tabindex="0"><span class="tip-number">5</span>
-        <div class="tip"><span class="tip-strong">The brain</span> doesn’t finish developing until about 25 - especially the part that resists impulse. Be patient with your poor past self.</div>
+      <li class="tip-row" id="5" tabindex="0" data-tags="neuroscience development impulse control prefrontal cortex young adults decision making self compassion"><span class="tip-number">5</span>
+        <div class="tip"><span class="tip-strong">The brain</span> doesn't finish developing until about 25 - especially the part that resists impulse. Be patient with your poor past self.</div>
       </li>
-      <li class="tip-row" id="6" tabindex="0"><span class="tip-number">6</span>
+      <li class="tip-row" id="6" tabindex="0" data-tags="emotional contagion relationships communication conflict de-escalation empathy social psychology"><span class="tip-number">6</span>
         <div class="tip"><span class="tip-strong">People mirror emotions.</span> If you're calm, they calm. If you're angry, they escalate. You choose the feedback loop.</div>
       </li>
-      <li class="tip-row" id="7" tabindex="0"><span class="tip-number">7</span>
-        <div class="tip"><span class="tip-strong">The sunk cost fallacy</span> keeps people in bad jobs, relationships, and habits. Just because you’ve invested time doesn’t mean you should keep going.</div>
+      <li class="tip-row" id="7" tabindex="0" data-tags="cognitive bias decision making economics relationships career habits letting go quitting"><span class="tip-number">7</span>
+        <div class="tip"><span class="tip-strong">The sunk cost fallacy</span> keeps people in bad jobs, relationships, and habits. Just because you've invested time doesn't mean you should keep going.</div>
       </li>
-      <li class="tip-row" id="8" tabindex="0"><span class="tip-number">8</span>
-        <div class="tip"><span class="tip-strong">Sleep deprivation</span> makes you impulsive and emotionally irrational. Don’t try to “power through” - you’re becoming dumber and more reactive.</div>
+      <li class="tip-row" id="8" tabindex="0" data-tags="sleep health productivity emotional regulation impulse control cognitive function rest"><span class="tip-number">8</span>
+        <div class="tip"><span class="tip-strong">Sleep deprivation</span> makes you impulsive and emotionally irrational. Don't try to "power through" - you're becoming dumber and more reactive.</div>
       </li>
-      <li class="tip-row" id="9" tabindex="0"><span class="tip-number">9</span>
+      <li class="tip-row" id="9" tabindex="0" data-tags="trauma epigenetics generational family genetics stress inheritance healing"><span class="tip-number">9</span>
         <div class="tip"><span class="tip-strong">Trauma</span> can be passed epigenetically - not just culturally. Your parents' or grandparents' stress can shape your physiology.</div>
       </li>
-      <li class="tip-row" id="10" tabindex="0"><span class="tip-number">10</span>
+      <li class="tip-row" id="10" tabindex="0" data-tags="unconscious self awareness rationalization behavior psychology mindfulness observation"><span class="tip-number">10</span>
         <div class="tip"><span class="tip-strong">Most of your behavior</span> is unconscious. You rationalize after the fact. Learn to watch what you do, not what you <em>say</em> you believe.</div>
       </li>
-      <li class="tip-row" id="11" tabindex="0"><span class="tip-number">11</span>
-        <div class="tip"><span class="tip-strong">The availability heuristic</span> makes rare events feel common. Seeing one plane crash doesn’t make flying dangerous.</div>
+      <li class="tip-row" id="11" tabindex="0" data-tags="cognitive bias risk assessment media probability fear flying statistics perception"><span class="tip-number">11</span>
+        <div class="tip"><span class="tip-strong">The availability heuristic</span> makes rare events feel common. Seeing one plane crash doesn't make flying dangerous.</div>
       </li>
-      <li class="tip-row" id="12" tabindex="0"><span class="tip-number">12</span>
-        <div class="tip"><span class="tip-strong">Corporations</span> use psychological tricks to keep you hooked. Infinite scroll, red badges, “limited time” offers - it’s behavioural design.</div>
+      <li class="tip-row" id="12" tabindex="0" data-tags="capitalism manipulation design addiction marketing psychology consumerism attention economy"><span class="tip-number">12</span>
+        <div class="tip"><span class="tip-strong">Corporations</span> use psychological tricks to keep you hooked. Infinite scroll, red badges, "limited time" offers - it's behavioural design.</div>
       </li>
-      <li class="tip-row" id="13" tabindex="0"><span class="tip-number">13</span>
+      <li class="tip-row" id="13" tabindex="0" data-tags="productivity focus attention cognitive load efficiency task switching concentration work"><span class="tip-number">13</span>
         <div class="tip"><span class="tip-strong">Multitasking</span> makes you worse at everything. Task-switching is not free - it burns cognitive fuel and degrades memory.</div>
       </li>
-      <li class="tip-row" id="14" tabindex="0"><span class="tip-number">14</span>
+      <li class="tip-row" id="14" tabindex="0" data-tags="gut health microbiome mental health anxiety depression nutrition gut-brain axis health"><span class="tip-number">14</span>
         <div class="tip"><span class="tip-strong">Your gut</span> affects your mind. An unhealthy microbiome can increase anxiety and depression.</div>
       </li>
-      <li class="tip-row" id="15" tabindex="0"><span class="tip-number">15</span>
+      <li class="tip-row" id="15" tabindex="0" data-tags="exercise mental health depression endorphins movement fitness therapy natural remedies"><span class="tip-number">15</span>
         <div class="tip"><span class="tip-strong">Exercise</span> is a proven antidepressant. Regular movement is more effective than pills for many people.</div>
       </li>
-      <li class="tip-row" id="16" tabindex="0"><span class="tip-number">16</span>
-        <div class="tip"><span class="tip-strong">Groupthink</span> happens fast. If everyone in a room agrees too easily, something important isn’t being said.</div>
+      <li class="tip-row" id="16" tabindex="0" data-tags="group dynamics conformity decision making dissent critical thinking workplace meetings leadership"><span class="tip-number">16</span>
+        <div class="tip"><span class="tip-strong">Groupthink</span> happens fast. If everyone in a room agrees too easily, something important isn't being said.</div>
       </li>
-      <li class="tip-row" id="17" tabindex="0"><span class="tip-number">17</span>
+      <li class="tip-row" id="17" tabindex="0" data-tags="placebo belief mind-body healing medicine psychology expectation ethics"><span class="tip-number">17</span>
         <div class="tip"><span class="tip-strong">The placebo effect</span> is real. Belief changes physiology. Use it ethically, not cynically.</div>
       </li>
-      <li class="tip-row" id="18" tabindex="0"><span class="tip-number">18</span>
-        <div class="tip"><span class="tip-strong">Cognitive dissonance</span> makes people double down when shown they’re wrong. Don’t argue to win - argue to open.</div>
+      <li class="tip-row" id="18" tabindex="0" data-tags="cognitive dissonance arguments belief persuasion communication bias defensiveness dialogue"><span class="tip-number">18</span>
+        <div class="tip"><span class="tip-strong">Cognitive dissonance</span> makes people double down when shown they're wrong. Don't argue to win - argue to open.</div>
       </li>
-      <li class="tip-row" id="19" tabindex="0"><span class="tip-number">19</span>
+      <li class="tip-row" id="19" tabindex="0" data-tags="spotlight effect self consciousness social anxiety performance authenticity freedom psychology"><span class="tip-number">19</span>
         <div class="tip"><span class="tip-strong">No one</span> is paying as much attention to you as you think. This is liberating - stop performing.</div>
       </li>
-      <li class="tip-row" id="20" tabindex="0"><span class="tip-number">20</span>
+      <li class="tip-row" id="20" tabindex="0" data-tags="identity self personality change growth psychology philosophy fluidity construction"><span class="tip-number">20</span>
         <div class="tip"><span class="tip-strong">You are not a fixed identity.</span> The self is fluid, context-dependent, and largely constructed after the fact.</div>
       </li>
-      <li class="tip-row" id="21" tabindex="0"><span class="tip-number">21</span>
-        <div class="tip"><span class="tip-strong">AI doesn’t understand</span> - it predicts. It’s guessing the next likely word, not thinking.</div>
+      <li class="tip-row" id="21" tabindex="0" data-tags="artificial intelligence AI machine learning understanding prediction thinking technology language models"><span class="tip-number">21</span>
+        <div class="tip"><span class="tip-strong">AI doesn&#x27;t understand</span> - it predicts. It's guessing the next likely word, not thinking.</div>
       </li>
-      <li class="tip-row" id="22" tabindex="0"><span class="tip-number">22</span>
+      <li class="tip-row" id="22" tabindex="0" data-tags="Dunning-Kruger confidence competence expertise humility overconfidence knowledge skepticism"><span class="tip-number">22</span>
         <div class="tip"><span class="tip-strong">The Dunning-Kruger effect</span> means the most confident people are often the least competent. Be skeptical of loud certainty.</div>
       </li>
-      <li class="tip-row" id="23" tabindex="0"><span class="tip-number">23</span>
-        <div class="tip"><span class="tip-strong">Capitalism</span> doesn’t reward what’s meaningful - it rewards what’s profitable. This is why many valuable jobs are underpaid.</div>
+      <li class="tip-row" id="23" tabindex="0" data-tags="capitalism economics meaning profit work teachers healthcare social workers value"><span class="tip-number">23</span>
+        <div class="tip"><span class="tip-strong">Capitalism</span> doesn't reward what's meaningful - it rewards what's profitable. This is why many valuable jobs are underpaid.</div>
       </li>
-      <li class="tip-row" id="24" tabindex="0"><span class="tip-number">24</span>
-        <div class="tip"><span class="tip-strong">People don't act based on facts;</span> they act based on stories that <em>feel</em> true. Understand narrative, not just logic.</div>
+      <li class="tip-row" id="24" tabindex="0" data-tags="narrative storytelling persuasion emotion logic decision making communication human behavior"><span class="tip-number">24</span>
+        <div class="tip"><span class="tip-strong">People don&#x27;t act based on facts;</span> they act based on stories that <em>feel</em> true. Understand narrative, not just logic.</div>
       </li>
-      <li class="tip-row" id="25" tabindex="0"><span class="tip-number">25</span>
-        <div class="tip"><span class="tip-strong">The “Just World Fallacy”</span> makes people blame victims. The world isn’t fair - bad things happen to good people.</div>
+      <li class="tip-row" id="25" tabindex="0" data-tags="just world fallacy victim blaming fairness cognitive bias justice compassion inequality"><span class="tip-number">25</span>
+        <div class="tip"><span class="tip-strong">The &quot;Just World Fallacy&quot;</span> makes people blame victims. The world isn't fair - bad things happen to good people.</div>
       </li>
-      <li class="tip-row" id="26" tabindex="0"><span class="tip-number">26</span>
-        <div class="tip"><span class="tip-strong">Your phone</span> steals your presence. Even when it’s in your pocket, it reduces your working memory.</div>
+      <li class="tip-row" id="26" tabindex="0" data-tags="smartphone attention presence working memory distraction technology mindfulness focus"><span class="tip-number">26</span>
+        <div class="tip"><span class="tip-strong">Your phone</span> steals your presence. Even when it's in your pocket, it reduces your working memory.</div>
       </li>
-      <li class="tip-row" id="27" tabindex="0"><span class="tip-number">27</span>
-        <div class="tip"><span class="tip-strong">Mindfulness</span> isn’t about peace - it’s about awareness. You won’t always feel better, but you’ll see more clearly.</div>
+      <li class="tip-row" id="27" tabindex="0" data-tags="mindfulness awareness meditation clarity presence observation consciousness peace"><span class="tip-number">27</span>
+        <div class="tip"><span class="tip-strong">Mindfulness</span> isn't about peace - it's about awareness. You won't always feel better, but you'll see more clearly.</div>
       </li>
-      <li class="tip-row" id="28" tabindex="0"><span class="tip-number">28</span>
+      <li class="tip-row" id="28" tabindex="0" data-tags="depression mental health symptoms numbness irritability flatness early warning recognition"><span class="tip-number">28</span>
         <div class="tip"><span class="tip-strong">Depression</span> isn't always sadness - it's often flatness, numbness, or irritation. Learn the signs early.</div>
       </li>
-      <li class="tip-row" id="29" tabindex="0"><span class="tip-number">29</span>
-        <div class="tip"><span class="tip-strong">Repression</span> doesn’t erase feelings - it buries them until they leak out elsewhere. Usually at the worst time.</div>
+      <li class="tip-row" id="29" tabindex="0" data-tags="repression emotions suppression emotional processing psychology unconscious healing feelings"><span class="tip-number">29</span>
+        <div class="tip"><span class="tip-strong">Repression</span> doesn't erase feelings - it buries them until they leak out elsewhere. Usually at the worst time.</div>
       </li>
-      <li class="tip-row" id="30" tabindex="0"><span class="tip-number">30</span>
+      <li class="tip-row" id="30" tabindex="0" data-tags="nervous system co-regulation relationships safety trauma connection healing social support"><span class="tip-number">30</span>
         <div class="tip"><span class="tip-strong">Your nervous system</span> learns safety or danger from your relationships. Regulate with people, not just alone.</div>
       </li>
-      <li class="tip-row" id="31" tabindex="0"><span class="tip-number">31</span>
+      <li class="tip-row" id="31" tabindex="0" data-tags="body trauma somatic embodied memory physical symptoms tension pain body-mind connection"><span class="tip-number">31</span>
         <div class="tip"><span class="tip-strong">The body</span> holds memory. Trauma often appears as pain, tightness, shutdown - not just thoughts.</div>
       </li>
-      <li class="tip-row" id="32" tabindex="0"><span class="tip-number">32</span>
-        <div class="tip"><span class="tip-strong">You can have compassion</span> and still set boundaries. Letting people walk over you isn’t kindness - it’s fear.</div>
+      <li class="tip-row" id="32" tabindex="0" data-tags="boundaries compassion kindness fear self-respect relationships assertiveness self-care"><span class="tip-number">32</span>
+        <div class="tip"><span class="tip-strong">You can have compassion</span> and still set boundaries. Letting people walk over you isn't kindness - it's fear.</div>
       </li>
-      <li class="tip-row" id="33" tabindex="0"><span class="tip-number">33</span>
-        <div class="tip"><span class="tip-strong">People don’t change from shame.</span> They change when they feel safe enough to see clearly.</div>
+      <li class="tip-row" id="33" tabindex="0" data-tags="shame change safety growth transformation self-compassion healing psychological safety"><span class="tip-number">33</span>
+        <div class="tip"><span class="tip-strong">People don&#x27;t change from shame.</span> They change when they feel safe enough to see clearly.</div>
       </li>
-      <li class="tip-row" id="34" tabindex="0"><span class="tip-number">34</span>
-        <div class="tip"><span class="tip-strong">Every social media post</span> is curated. You’re comparing your behind-the-scenes to someone’s highlight reel.</div>
+      <li class="tip-row" id="34" tabindex="0" data-tags="social media comparison curation authenticity highlight reel self-esteem reality perception"><span class="tip-number">34</span>
+        <div class="tip"><span class="tip-strong">Every social media post</span> is curated. You're comparing your behind-the-scenes to someone's highlight reel.</div>
       </li>
-      <li class="tip-row" id="35" tabindex="0"><span class="tip-number">35</span>
-        <div class="tip"><span class="tip-strong">FOMO</span> is a manipulation tool. You’re not missing out - you’re being sold a feeling.</div>
+      <li class="tip-row" id="35" tabindex="0" data-tags="FOMO fear of missing out manipulation marketing anxiety contentment present moment advertising"><span class="tip-number">35</span>
+        <div class="tip"><span class="tip-strong">FOMO</span> is a manipulation tool. You're not missing out - you're being sold a feeling.</div>
       </li>
-      <li class="tip-row" id="36" tabindex="0"><span class="tip-number">36</span>
+      <li class="tip-row" id="36" tabindex="0" data-tags="medication antidepressants mental health psychiatry informed consent side effects treatment therapy"><span class="tip-number">36</span>
         <div class="tip"><span class="tip-strong">Psychotropic drugs</span> don't "fix" you - they create new baselines. Sometimes useful, sometimes numbing. Be informed.</div>
       </li>
-      <li class="tip-row" id="37" tabindex="0"><span class="tip-number">37</span>
-        <div class="tip"><span class="tip-strong">Silence</span> is powerful. Most people rush to fill it because they’re uncomfortable with themselves.</div>
+      <li class="tip-row" id="37" tabindex="0" data-tags="silence discomfort self-awareness communication presence solitude inner work reflection"><span class="tip-number">37</span>
+        <div class="tip"><span class="tip-strong">Silence</span> is powerful. Most people rush to fill it because they're uncomfortable with themselves.</div>
       </li>
-      <li class="tip-row" id="38" tabindex="0"><span class="tip-number">38</span>
-        <div class="tip"><span class="tip-strong">Most goals</span> are just proxies for emotion. You don’t want a six-pack - you want to feel respected or in control.</div>
+      <li class="tip-row" id="38" tabindex="0" data-tags="goals motivation emotions self-worth validation underlying needs intrinsic motivation psychology"><span class="tip-number">38</span>
+        <div class="tip"><span class="tip-strong">Most goals</span> are just proxies for emotion. You don't want a six-pack - you want to feel respected or in control.</div>
       </li>
-      <li class="tip-row" id="39" tabindex="0"><span class="tip-number">39</span>
+      <li class="tip-row" id="39" tabindex="0" data-tags="attention focus mindfulness distraction precious resource awareness present moment quality of life"><span class="tip-number">39</span>
         <div class="tip"><span class="tip-strong">Your attention</span> is the most valuable thing you own. Guard it like your life depends on it - because it does.</div>
       </li>
-      <li class="tip-row" id="40" tabindex="0"><span class="tip-number">40</span>
+      <li class="tip-row" id="40" tabindex="0" data-tags="desire advertising influencers marketing manipulation consumerism lack manufactured need"><span class="tip-number">40</span>
         <div class="tip"><span class="tip-strong">Desire</span> is manufactured. Ads and influencers are <em>designed</em> to make you feel a lack.</div>
       </li>
-      <li class="tip-row" id="41" tabindex="0"><span class="tip-number">41</span>
-        <div class="tip"><span class="tip-strong">People can’t think clearly when they’re scared.</span> Fear hijacks the brain’s executive function. Start with safety.</div>
+      <li class="tip-row" id="41" tabindex="0" data-tags="fear anxiety executive function safety threat response clear thinking amygdala hijack psychology"><span class="tip-number">41</span>
+        <div class="tip"><span class="tip-strong">People can&#x27;t think clearly when they&#x27;re scared.</span> Fear hijacks the brain's executive function. Start with safety.</div>
       </li>
-      <li class="tip-row" id="42" tabindex="0"><span class="tip-number">42</span>
-        <div class="tip"><span class="tip-strong">Procrastination</span> is often perfectionism in disguise. You're afraid of doing something “bad,” so you don’t do it at all.</div>
+      <li class="tip-row" id="42" tabindex="0" data-tags="procrastination perfectionism fear paralysis productivity self-sabotage avoidance action"><span class="tip-number">42</span>
+        <div class="tip"><span class="tip-strong">Procrastination</span> is often perfectionism in disguise. You're afraid of doing something "bad," so you don't do it at all.</div>
       </li>
-      <li class="tip-row" id="43" tabindex="0"><span class="tip-number">43</span>
-        <div class="tip"><span class="tip-strong">Solitude</span> is not loneliness. Learn to be with yourself, or you’ll seek company that fills the void poorly.</div>
+      <li class="tip-row" id="43" tabindex="0" data-tags="solitude loneliness being alone self-relationship codependency inner work self-sufficiency relationships"><span class="tip-number">43</span>
+        <div class="tip"><span class="tip-strong">Solitude</span> is not loneliness. Learn to be with yourself, or you'll seek company that fills the void poorly.</div>
       </li>
-      <li class="tip-row" id="44" tabindex="0"><span class="tip-number">44</span>
-        <div class="tip"><span class="tip-strong">“Should”</span> is usually someone else’s voice in your head. Replace it with “do I <em>want</em> to” or “is this <em>true</em>?”</div>
+      <li class="tip-row" id="44" tabindex="0" data-tags="should expectations inner critic authenticity choice autonomy self-direction conditioning"><span class="tip-number">44</span>
+        <div class="tip"><span class="tip-strong">&quot;Should&quot;</span> is usually someone else's voice in your head. Replace it with "do I <em>want</em> to" or "is this <em>true</em>?"</div>
       </li>
-      <li class="tip-row" id="45" tabindex="0"><span class="tip-number">45</span>
+      <li class="tip-row" id="45" tabindex="0" data-tags="evolution survival happiness meaning connection resilience human nature training"><span class="tip-number">45</span>
         <div class="tip"><span class="tip-strong">We evolved to survive,</span> not to be happy. But we can train for meaning, connection, and resilience.</div>
       </li>
-      <li class="tip-row" id="46" tabindex="0"><span class="tip-number">46</span>
-        <div class="tip"><span class="tip-strong">Most modern suffering</span> is symbolic. You’re not running from tigers - you’re ruminating about an email.</div>
+      <li class="tip-row" id="46" tabindex="0" data-tags="modern suffering rumination symbolic threats overthinking anxiety perspective first world problems mental loops"><span class="tip-number">46</span>
+        <div class="tip"><span class="tip-strong">Most modern suffering</span> is symbolic. You're not running from tigers - you're ruminating about an email.</div>
       </li>
-      <li class="tip-row" id="47" tabindex="0"><span class="tip-number">47</span>
+      <li class="tip-row" id="47" tabindex="0" data-tags="consumerism identity marketing self-image materialism branding status consumer culture"><span class="tip-number">47</span>
         <div class="tip"><span class="tip-strong">Consumerism</span> sells identity. You're not buying a product - you're buying a story about who you are.</div>
       </li>
-      <li class="tip-row" id="48" tabindex="0"><span class="tip-number">48</span>
-        <div class="tip"><span class="tip-strong">When in doubt, breathe.</span> Long, slow exhales calm your nervous system. It’s biology, not woo.</div>
+      <li class="tip-row" id="48" tabindex="0" data-tags="breathing nervous system anxiety calm biology physiology stress relief regulation"><span class="tip-number">48</span>
+        <div class="tip"><span class="tip-strong">When in doubt, breathe.</span> Long, slow exhales calm your nervous system. It's biology, not woo.</div>
       </li>
-      <li class="tip-row" id="49" tabindex="0"><span class="tip-number">49</span>
-        <div class="tip"><span class="tip-strong">It’s okay not to know.</span> Doubt is the beginning of wisdom, not the absence of it.</div>
+      <li class="tip-row" id="49" tabindex="0" data-tags="doubt wisdom uncertainty knowledge humility learning philosophy intellectual growth"><span class="tip-number">49</span>
+        <div class="tip"><span class="tip-strong">It&#x27;s okay not to know.</span> Doubt is the beginning of wisdom, not the absence of it.</div>
       </li>
-      <li class="tip-row" id="50" tabindex="0"><span class="tip-number">50</span>
+      <li class="tip-row" id="50" tabindex="0" data-tags="death memento mori mortality priorities philosophy focus meaning stoicism"><span class="tip-number">50</span>
         <div class="tip"><span class="tip-strong">You will die.</span> Memento mori. Use it to focus on what matters.</div>
       </li>
-      <li class="tip-row" id="51" tabindex="0"><span class="tip-number">51</span>
+      <li class="tip-row" id="51" tabindex="0" data-tags="prediction cognitive bias familiarity brain neuroscience truth pattern recognition comfort zone"><span class="tip-number">51</span>
         <div class="tip"><span class="tip-strong">Your brain rewards prediction,</span> not truth. It prefers a wrong but familiar answer to an unfamiliar but correct one.</div>
       </li>
-      <li class="tip-row" id="52" tabindex="0"><span class="tip-number">52</span>
-        <div class="tip"><span class="tip-strong">Most people don’t listen -</span> they wait to speak. Learn to actually listen and you’ll understand far more than others do.</div>
+      <li class="tip-row" id="52" tabindex="0" data-tags="listening communication understanding relationships conversation empathy active listening social skills"><span class="tip-number">52</span>
+        <div class="tip"><span class="tip-strong">Most people don&#x27;t listen -</span> they wait to speak. Learn to actually listen and you'll understand far more than others do.</div>
       </li>
-      <li class="tip-row" id="53" tabindex="0"><span class="tip-number">53</span>
-        <div class="tip"><span class="tip-strong">“Overthinking”</span> is often unprocessed emotion disguised as logic. Get out of your head by feeling what's beneath the thoughts.</div>
+      <li class="tip-row" id="53" tabindex="0" data-tags="overthinking emotion rumination logic feelings emotional processing mental loops embodiment"><span class="tip-number">53</span>
+        <div class="tip"><span class="tip-strong">&quot;Overthinking&quot;</span> is often unprocessed emotion disguised as logic. Get out of your head by feeling what's beneath the thoughts.</div>
       </li>
-      <li class="tip-row" id="54" tabindex="0"><span class="tip-number">54</span>
-        <div class="tip"><span class="tip-strong">The phrase “that’s just how I am”</span> is usually a defense, not a fact. Personality isn’t fixed.</div>
+      <li class="tip-row" id="54" tabindex="0" data-tags="personality change growth defense mechanisms fixed mindset neuroplasticity self-improvement identity"><span class="tip-number">54</span>
+        <div class="tip"><span class="tip-strong">The phrase &quot;that&#x27;s just how I am&quot;</span> is usually a defense, not a fact. Personality isn't fixed.</div>
       </li>
-      <li class="tip-row" id="55" tabindex="0"><span class="tip-number">55</span>
-        <div class="tip"><span class="tip-strong">"Toxic positivity"</span> dismisses pain in the name of cheerfulness. Sometimes things are just hard, and that's okay to admit.</div>
+      <li class="tip-row" id="55" tabindex="0" data-tags="toxic positivity pain validation cheerfulness emotional honesty difficulty acceptance mental health"><span class="tip-number">55</span>
+        <div class="tip"><span class="tip-strong">&quot;Toxic positivity&quot;</span> dismisses pain in the name of cheerfulness. Sometimes things are just hard, and that's okay to admit.</div>
       </li>
-      <li class="tip-row" id="56" tabindex="0"><span class="tip-number">56</span>
+      <li class="tip-row" id="56" tabindex="0" data-tags="attention span technology distraction focus moral failing digital age concentration media"><span class="tip-number">56</span>
         <div class="tip"><span class="tip-strong">The average adult attention span</span> is now under 8 seconds. This is a technological problem, not a moral failing.</div>
       </li>
-      <li class="tip-row" id="57" tabindex="0"><span class="tip-number">57</span>
+      <li class="tip-row" id="57" tabindex="0" data-tags="emotional complexity grief gratitude anger love human nature nuance feelings"><span class="tip-number">57</span>
         <div class="tip"><span class="tip-strong">You can feel two things at once.</span> Grief and gratitude. Anger and love. Complexity is human.</div>
       </li>
-      <li class="tip-row" id="58" tabindex="0"><span class="tip-number">58</span>
-        <div class="tip"><span class="tip-strong">Being busy</span> is often a way to avoid yourself. Stillness reveals what you’ve been running from.</div>
+      <li class="tip-row" id="58" tabindex="0" data-tags="busyness avoidance stillness self-awareness running away introspection presence inner work"><span class="tip-number">58</span>
+        <div class="tip"><span class="tip-strong">Being busy</span> is often a way to avoid yourself. Stillness reveals what you've been running from.</div>
       </li>
-      <li class="tip-row" id="59" tabindex="0"><span class="tip-number">59</span>
-        <div class="tip"><span class="tip-strong">Comparison</span> is self-harm dressed as ambition. Measure yourself by your values, not other people’s highlight reels.</div>
+      <li class="tip-row" id="59" tabindex="0" data-tags="comparison self-harm ambition values highlight reel social media self-worth authenticity"><span class="tip-number">59</span>
+        <div class="tip"><span class="tip-strong">Comparison</span> is self-harm dressed as ambition. Measure yourself by your values, not other people's highlight reels.</div>
       </li>
-      <li class="tip-row" id="60" tabindex="0"><span class="tip-number">60</span>
-        <div class="tip"><span class="tip-strong">The body can't distinguish</span> between real and imagined threat. That anxious text you haven’t replied to? Same cortisol as danger.</div>
+      <li class="tip-row" id="60" tabindex="0" data-tags="body threat response anxiety cortisol stress hormones physiology fight or flight modern stress"><span class="tip-number">60</span>
+        <div class="tip"><span class="tip-strong">The body can&#x27;t distinguish</span> between real and imagined threat. That anxious text you haven't replied to? Same cortisol as danger.</div>
       </li>
-      <li class="tip-row" id="61" tabindex="0"><span class="tip-number">61</span>
+      <li class="tip-row" id="61" tabindex="0" data-tags="shame guilt identity behavior paralysis useful emotion self-worth psychology"><span class="tip-number">61</span>
         <div class="tip"><span class="tip-strong">Shame</span> is about who you <em>are</em>; guilt is about what you <em>did</em>. One is paralyzing, the other is useful.</div>
       </li>
-      <li class="tip-row" id="62" tabindex="0"><span class="tip-number">62</span>
+      <li class="tip-row" id="62" tabindex="0" data-tags="feelings memory conflict emotional impact relationships communication lasting impression empathy"><span class="tip-number">62</span>
         <div class="tip"><span class="tip-strong">People tend to remember</span> how you made them <em>feel</em>, not what you said. Especially in conflict.</div>
       </li>
-      <li class="tip-row" id="63" tabindex="0"><span class="tip-number">63</span>
+      <li class="tip-row" id="63" tabindex="0" data-tags="reassurance anxiety discomfort avoidance tolerance sitting with feelings emotional regulation coping"><span class="tip-number">63</span>
         <div class="tip"><span class="tip-strong">Reassurance</span> often reinforces anxiety. Learn to sit with discomfort instead of escaping it.</div>
       </li>
-      <li class="tip-row" id="64" tabindex="0"><span class="tip-number">64</span>
-        <div class="tip"><span class="tip-strong">Saying “I’m fine”</span> when you're not doesn't build strength - it builds distance.</div>
+      <li class="tip-row" id="64" tabindex="0" data-tags="emotional honesty fine strength distance vulnerability relationships authenticity connection"><span class="tip-number">64</span>
+        <div class="tip"><span class="tip-strong">Saying &quot;I&#x27;m fine&quot;</span> when you're not doesn't build strength - it builds distance.</div>
       </li>
-      <li class="tip-row" id="65" tabindex="0"><span class="tip-number">65</span>
+      <li class="tip-row" id="65" tabindex="0" data-tags="wealth freedom peace money philosophy values happiness life goals"><span class="tip-number">65</span>
         <div class="tip"><span class="tip-strong">Wealth</span> is not the same as freedom. And freedom is not the same as peace.</div>
       </li>
-      <li class="tip-row" id="66" tabindex="0"><span class="tip-number">66</span>
-        <div class="tip"><span class="tip-strong">You can learn a lot</span> about someone by how they handle “no.” Rejection reveals character.</div>
+      <li class="tip-row" id="66" tabindex="0" data-tags="rejection character boundaries response personality relationships resilience maturity"><span class="tip-number">66</span>
+        <div class="tip"><span class="tip-strong">You can learn a lot</span> about someone by how they handle "no." Rejection reveals character.</div>
       </li>
-      <li class="tip-row" id="67" tabindex="0"><span class="tip-number">67</span>
+      <li class="tip-row" id="67" tabindex="0" data-tags="discomfort growth change awkwardness tension emotional friction development transformation"><span class="tip-number">67</span>
         <div class="tip"><span class="tip-strong">Discomfort</span> is the price of growth. If you want change, expect awkwardness, tension, and emotional friction.</div>
       </li>
-      <li class="tip-row" id="68" tabindex="0"><span class="tip-number">68</span>
+      <li class="tip-row" id="68" tabindex="0" data-tags="communication silence power clarity mindfulness restraint wisdom presence"><span class="tip-number">68</span>
         <div class="tip"><span class="tip-strong">Saying less</span> is often more powerful. Stillness in speech is clarity in mind.</div>
       </li>
-      <li class="tip-row" id="69" tabindex="0"><span class="tip-number">69</span>
-        <div class="tip"><span class="tip-strong">Most apologies fail</span> because they’re self-protective. A real apology names the harm and expects nothing in return.</div>
+      <li class="tip-row" id="69" tabindex="0" data-tags="apologies self-protection harm accountability relationships repair empathy responsibility"><span class="tip-number">69</span>
+        <div class="tip"><span class="tip-strong">Most apologies fail</span> because they're self-protective. A real apology names the harm and expects nothing in return.</div>
       </li>
-      <li class="tip-row" id="70" tabindex="0"><span class="tip-number">70</span>
-        <div class="tip"><span class="tip-strong">You’ll never be fully ready.</span> If you wait until you are, you’ll never move.</div>
+      <li class="tip-row" id="70" tabindex="0" data-tags="readiness action paralysis perfectionism procrastination courage momentum starting"><span class="tip-number">70</span>
+        <div class="tip"><span class="tip-strong">You&#x27;ll never be fully ready.</span> If you wait until you are, you'll never move.</div>
       </li>
-      <li class="tip-row" id="71" tabindex="0"><span class="tip-number">71</span>
-        <div class="tip"><span class="tip-strong">Friendship in adulthood</span> takes intentional effort. Don’t wait to “feel like it” - schedule connection.</div>
+      <li class="tip-row" id="71" tabindex="0" data-tags="friendship adulthood intentional effort connection relationships scheduling social life maintenance"><span class="tip-number">71</span>
+        <div class="tip"><span class="tip-strong">Friendship in adulthood</span> takes intentional effort. Don't wait to "feel like it" - schedule connection.</div>
       </li>
-      <li class="tip-row" id="72" tabindex="0"><span class="tip-number">72</span>
-        <div class="tip"><span class="tip-strong">You don’t need to monetize every passion.</span> Not everything has to be a hustle.</div>
+      <li class="tip-row" id="72" tabindex="0" data-tags="monetization passion hustle culture creativity hobby capitalism joy intrinsic value"><span class="tip-number">72</span>
+        <div class="tip"><span class="tip-strong">You don&#x27;t need to monetize every passion.</span> Not everything has to be a hustle.</div>
       </li>
-      <li class="tip-row" id="73" tabindex="0"><span class="tip-number">73</span>
+      <li class="tip-row" id="73" tabindex="0" data-tags="strong opinions insecurity certainty defense mechanism confidence vulnerability psychology ego"><span class="tip-number">73</span>
         <div class="tip"><span class="tip-strong">Strong opinions</span> are often hiding insecurity. Certainty can be a defence mechanism.</div>
       </li>
-      <li class="tip-row" id="74" tabindex="0"><span class="tip-number">74</span>
+      <li class="tip-row" id="74" tabindex="0" data-tags="relationships repair perfection conflict fighting long-term maintenance communication"><span class="tip-number">74</span>
         <div class="tip"><span class="tip-strong">Long-term relationships</span> are built on repair, not perfection. Learn to fight <em>well</em>.</div>
       </li>
-      <li class="tip-row" id="75" tabindex="0"><span class="tip-number">75</span>
-        <div class="tip"><span class="tip-strong">Modern food</span> hijacks your biology. It’s not just about willpower - it’s by design.</div>
+      <li class="tip-row" id="75" tabindex="0" data-tags="food biology willpower design processed food nutrition addiction industry manipulation"><span class="tip-number">75</span>
+        <div class="tip"><span class="tip-strong">Modern food</span> hijacks your biology. It's not just about willpower - it's by design.</div>
       </li>
-      <li class="tip-row" id="76" tabindex="0"><span class="tip-number">76</span>
-        <div class="tip"><span class="tip-strong">You can’t think your way out of a body problem.</span> Sometimes the answer is breath, sleep, movement - not insight.</div>
+      <li class="tip-row" id="76" tabindex="0" data-tags="body thinking breath sleep movement embodiment somatic physical solutions"><span class="tip-number">76</span>
+        <div class="tip"><span class="tip-strong">You can&#x27;t think your way out of a body problem.</span> Sometimes the answer is breath, sleep, movement - not insight.</div>
       </li>
-      <li class="tip-row" id="77" tabindex="0"><span class="tip-number">77</span>
-        <div class="tip"><span class="tip-strong">“Tired but wired”</span> is a sign of nervous system dysregulation. You’re not lazy - you’re overstimulated.</div>
+      <li class="tip-row" id="77" tabindex="0" data-tags="tired but wired nervous system dysregulation lazy overstimulation burnout exhaustion stress"><span class="tip-number">77</span>
+        <div class="tip"><span class="tip-strong">&quot;Tired but wired&quot;</span> is a sign of nervous system dysregulation. You're not lazy - you're overstimulated.</div>
       </li>
-      <li class="tip-row" id="78" tabindex="0"><span class="tip-number">78</span>
+      <li class="tip-row" id="78" tabindex="0" data-tags="goals systems fantasies habits planning consistency implementation sustainability"><span class="tip-number">78</span>
         <div class="tip"><span class="tip-strong">Goals without systems</span> are fantasies. Build habits, not heroic plans.</div>
       </li>
-      <li class="tip-row" id="79" tabindex="0"><span class="tip-number">79</span>
+      <li class="tip-row" id="79" tabindex="0" data-tags="feedback projection criticism boundaries discernment psychology relationships self-protection"><span class="tip-number">79</span>
         <div class="tip"><span class="tip-strong">Most feedback</span> is projection. Take what's useful. Leave the rest.</div>
       </li>
-      <li class="tip-row" id="80" tabindex="0"><span class="tip-number">80</span>
+      <li class="tip-row" id="80" tabindex="0" data-tags="emptiness fulfillment wrong things values priorities meaning life satisfaction alignment"><span class="tip-number">80</span>
         <div class="tip"><span class="tip-strong">If your life feels empty,</span> it might be full of the wrong things.</div>
       </li>
-      <li class="tip-row" id="81" tabindex="0"><span class="tip-number">81</span>
-        <div class="tip"><span class="tip-strong">"Self-care"</span> isn’t bubble baths - it’s doing the uncomfortable stuff that keeps you grounded long-term.</div>
+      <li class="tip-row" id="81" tabindex="0" data-tags="self-care bubble baths discomfort grounding long-term maintenance discipline wellness"><span class="tip-number">81</span>
+        <div class="tip"><span class="tip-strong">&quot;Self-care&quot;</span> isn't bubble baths - it's doing the uncomfortable stuff that keeps you grounded long-term.</div>
       </li>
-      <li class="tip-row" id="82" tabindex="0"><span class="tip-number">82</span>
+      <li class="tip-row" id="82" tabindex="0" data-tags="labels identity understanding cages categorization flexibility self-concept psychology"><span class="tip-number">82</span>
         <div class="tip"><span class="tip-strong">Labels</span> can help or trap. Use them for understanding, not identity cages.</div>
       </li>
-      <li class="tip-row" id="83" tabindex="0"><span class="tip-number">83</span>
-        <div class="tip"><span class="tip-strong">Silencing your needs</span> isn’t maturity - it’s learned helplessness.</div>
+      <li class="tip-row" id="83" tabindex="0" data-tags="needs silencing maturity learned helplessness self-advocacy boundaries psychology conditioning"><span class="tip-number">83</span>
+        <div class="tip"><span class="tip-strong">Silencing your needs</span> isn't maturity - it's learned helplessness.</div>
       </li>
-      <li class="tip-row" id="84" tabindex="0"><span class="tip-number">84</span>
-        <div class="tip"><span class="tip-strong">Your nervous system</span> is shaped by your childhood environment. But it’s not fixed.</div>
+      <li class="tip-row" id="84" tabindex="0" data-tags="nervous system childhood environment neuroplasticity trauma development healing change"><span class="tip-number">84</span>
+        <div class="tip"><span class="tip-strong">Your nervous system</span> is shaped by your childhood environment. But it's not fixed.</div>
       </li>
-      <li class="tip-row" id="85" tabindex="0"><span class="tip-number">85</span>
+      <li class="tip-row" id="85" tabindex="0" data-tags="intimacy vulnerability danger survival brain fear connection relationships"><span class="tip-number">85</span>
         <div class="tip"><span class="tip-strong">Most people are terrified</span> of real intimacy. Vulnerability feels like danger to a brain wired for survival.</div>
       </li>
-      <li class="tip-row" id="86" tabindex="0"><span class="tip-number">86</span>
-        <div class="tip"><span class="tip-strong">You’re allowed to grieve</span> dreams that no longer fit. Letting go is not failure.</div>
+      <li class="tip-row" id="86" tabindex="0" data-tags="grief dreams letting go failure change acceptance loss transition"><span class="tip-number">86</span>
+        <div class="tip"><span class="tip-strong">You&#x27;re allowed to grieve</span> dreams that no longer fit. Letting go is not failure.</div>
       </li>
-      <li class="tip-row" id="87" tabindex="0"><span class="tip-number">87</span>
-        <div class="tip"><span class="tip-strong">A regulated nervous system</span> feels boring at first if you’re used to chaos. Stability isn’t apathy.</div>
+      <li class="tip-row" id="87" tabindex="0" data-tags="regulated nervous system boring chaos stability apathy calm peace"><span class="tip-number">87</span>
+        <div class="tip"><span class="tip-strong">A regulated nervous system</span> feels boring at first if you're used to chaos. Stability isn't apathy.</div>
       </li>
-      <li class="tip-row" id="88" tabindex="0"><span class="tip-number">88</span>
-        <div class="tip"><span class="tip-strong">Not everything is trauma -</span> but everything <em>affects</em> you. Validating your experience doesn’t require dramatizing it.</div>
+      <li class="tip-row" id="88" tabindex="0" data-tags="trauma validation experience dramatization impact nuance psychology perspective"><span class="tip-number">88</span>
+        <div class="tip"><span class="tip-strong">Not everything is trauma -</span> but everything <em>affects</em> you. Validating your experience doesn't require dramatizing it.</div>
       </li>
-      <li class="tip-row" id="89" tabindex="0"><span class="tip-number">89</span>
+      <li class="tip-row" id="89" tabindex="0" data-tags="action perfectionism learning trying progress imperfection experimentation growth"><span class="tip-number">89</span>
         <div class="tip"><span class="tip-strong">Doing something poorly</span> is better than doing nothing. You learn by trying, not by waiting for perfection.</div>
       </li>
-      <li class="tip-row" id="90" tabindex="0"><span class="tip-number">90</span>
-        <div class="tip"><span class="tip-strong">The “self”</span> is a process, not a thing. There’s no core “you” - just patterns, habits, and stories you can rewrite.</div>
+      <li class="tip-row" id="90" tabindex="0" data-tags="self process identity patterns habits stories rewrite philosophy"><span class="tip-number">90</span>
+        <div class="tip"><span class="tip-strong">The &quot;self&quot;</span> is a process, not a thing. There's no core "you" - just patterns, habits, and stories you can rewrite.</div>
       </li>
-      <li class="tip-row" id="91" tabindex="0"><span class="tip-number">91</span>
-        <div class="tip"><span class="tip-strong">We live in a meaning crisis.</span> That doesn’t mean nothing matters - it means you have to <em>choose</em> what matters.</div>
+      <li class="tip-row" id="91" tabindex="0" data-tags="meaning crisis choice values purpose nihilism philosophy intentionality modern life"><span class="tip-number">91</span>
+        <div class="tip"><span class="tip-strong">We live in a meaning crisis.</span> That doesn't mean nothing matters - it means you have to <em>choose</em> what matters.</div>
       </li>
-      <li class="tip-row" id="92" tabindex="0"><span class="tip-number">92</span>
-        <div class="tip"><span class="tip-strong">If you don’t define success,</span> someone else will. Probably an algorithm or a marketing team.</div>
+      <li class="tip-row" id="92" tabindex="0" data-tags="success definition algorithm marketing autonomy values external influence authenticity"><span class="tip-number">92</span>
+        <div class="tip"><span class="tip-strong">If you don&#x27;t define success,</span> someone else will. Probably an algorithm or a marketing team.</div>
       </li>
-      <li class="tip-row" id="93" tabindex="0"><span class="tip-number">93</span>
-        <div class="tip"><span class="tip-strong">Cynicism</span> is lazy self-protection. It’s fear wearing the mask of intelligence.</div>
+      <li class="tip-row" id="93" tabindex="0" data-tags="cynicism self-protection fear intelligence defense mechanism vulnerability lazy mask"><span class="tip-number">93</span>
+        <div class="tip"><span class="tip-strong">Cynicism</span> is lazy self-protection. It's fear wearing the mask of intelligence.</div>
       </li>
-      <li class="tip-row" id="94" tabindex="0"><span class="tip-number">94</span>
-        <div class="tip"><span class="tip-strong">Beauty isn’t shallow.</span> Aesthetics can be grounding, healing, and profound. Curate your space with intention.</div>
+      <li class="tip-row" id="94" tabindex="0" data-tags="beauty aesthetics grounding healing profound space intention environment"><span class="tip-number">94</span>
+        <div class="tip"><span class="tip-strong">Beauty isn&#x27;t shallow.</span> Aesthetics can be grounding, healing, and profound. Curate your space with intention.</div>
       </li>
-      <li class="tip-row" id="95" tabindex="0"><span class="tip-number">95</span>
+      <li class="tip-row" id="95" tabindex="0" data-tags="technology culture brain ancient tools digital evolution adaptation mismatch"><span class="tip-number">95</span>
         <div class="tip"><span class="tip-strong">Technology outpaced culture.</span> Your brain is using ancient tools in a digital war zone.</div>
       </li>
-      <li class="tip-row" id="96" tabindex="0"><span class="tip-number">96</span>
-        <div class="tip"><span class="tip-strong">Learning to say “I don’t know”</span> might be the most underrated skill of all.</div>
+      <li class="tip-row" id="96" tabindex="0" data-tags="humility unknown skill learning intellectual honesty wisdom uncertainty knowledge"><span class="tip-number">96</span>
+        <div class="tip"><span class="tip-strong">Learning to say &quot;I don&#x27;t know&quot;</span> might be the most underrated skill of all.</div>
       </li>
-      <li class="tip-row" id="97" tabindex="0"><span class="tip-number">97</span>
-        <div class="tip"><span class="tip-strong">Art is necessary.</span> Not because it’s productive, but because it speaks when nothing else can.</div>
+      <li class="tip-row" id="97" tabindex="0" data-tags="art necessary productivity expression communication creativity human nature meaning"><span class="tip-number">97</span>
+        <div class="tip"><span class="tip-strong">Art is necessary.</span> Not because it's productive, but because it speaks when nothing else can.</div>
       </li>
-      <li class="tip-row" id="98" tabindex="0"><span class="tip-number">98</span>
-        <div class="tip"><span class="tip-strong">Meaning doesn’t arrive.</span> It’s made, moment by moment, in how you show up.</div>
+      <li class="tip-row" id="98" tabindex="0" data-tags="meaning creation presence showing up intentionality purpose philosophy engagement"><span class="tip-number">98</span>
+        <div class="tip"><span class="tip-strong">Meaning doesn&#x27;t arrive.</span> It's made, moment by moment, in how you show up.</div>
       </li>
-      <li class="tip-row" id="99" tabindex="0"><span class="tip-number">99</span>
+      <li class="tip-row" id="99" tabindex="0" data-tags="behind timeline myth rigged comparison social pressure authenticity rebellion"><span class="tip-number">99</span>
         <div class="tip"><span class="tip-strong">You are not behind.</span> The timeline is a myth. The game is rigged. Live anyway.</div>
       </li>
-      <li class="tip-row" id="100" tabindex="0"><span class="tip-number">100</span>
+      <li class="tip-row" id="100" tabindex="0" data-tags="survival attention awakening participation engagement consciousness mindfulness life"><span class="tip-number">100</span>
         <div class="tip"><span class="tip-strong">Survival is not enough.</span> Pay attention. Wake up. Participate.</div>
       </li>
-<li class="tip-row" id="101" tabindex="0"><span class="tip-number">101</span>
-  <div class="tip"><span class="tip-strong">Challenge authority,</span> but know that genuine expertise matters. An expert’s hard-won knowledge outweighs your Google search or Facebook thread-especially in their own field.</div>
-</li>
-<li class="tip-row" id="102" tabindex="0"><span class="tip-number">102</span>
-  <div class="tip"><span class="tip-strong">Flexibility beats certainty.</span> The world changes fast. Being adaptive is a superpower-clinging to fixed views or plans is a fast track to irrelevance.</div>
-</li>
+      <li class="tip-row" id="101" tabindex="0" data-tags="authority expertise knowledge google facebook research credentials critical thinking"><span class="tip-number">101</span>
+        <div class="tip"><span class="tip-strong">Challenge authority,</span> but know that genuine expertise matters. An expert's hard-won knowledge outweighs your Google search or Facebook thread-especially in their own field.</div>
+      </li>
+      <li class="tip-row" id="102" tabindex="0" data-tags="flexibility certainty adaptation change superpower fixed views relevance agility"><span class="tip-number">102</span>
+        <div class="tip"><span class="tip-strong">Flexibility beats certainty.</span> The world changes fast. Being adaptive is a superpower-clinging to fixed views or plans is a fast track to irrelevance.</div>
+      </li>
+      <li class="tip-row" id="103" tabindex="0" data-tags="rest resistance boundaries reclaim modern life burnout self-care rebellion"><span class="tip-number">103</span>
+        <div class="tip"><span class="tip-strong">Radical rest is resistance.</span> Refusing to always be "on" is a way to reclaim your life.</div>
+      </li>
+      <li class="tip-row" id="104" tabindex="0" data-tags="truth objectivity perspective reality knowledge facts relativism epistemology"><span class="tip-number">104</span>
+        <div class="tip"><span class="tip-strong">Facts exist,</span> even when filtered through perspective.</div>
+      </li>
+      <li class="tip-row" id="105" tabindex="0" data-tags="hypocrisy group dynamics morals tribal loyalty human nature consistency bias psychology"><span class="tip-number">105</span>
+        <div class="tip"><span class="tip-strong">Hypocrisy is a feature,</span> not a bug, of group dynamics. Humans bend their morals for their "side" all the time.</div>
+      </li>
+      <li class="tip-row" id="106" tabindex="0" data-tags="feedback adaptation learning iteration growth flexibility systems thinking improvement"><span class="tip-number">106</span>
+        <div class="tip"><span class="tip-strong">Treat life as a feedback loop—</span> listen, adjust, repeat.</div>
+      </li>
+      <li class="tip-row" id="107" tabindex="0" data-tags="meaning practice ritual rehearsal purpose intentionality habits values"><span class="tip-number">107</span>
+        <div class="tip"><span class="tip-strong">Making meaning takes practice;</span> ritual is one way to rehearse what matters.</div>
+      </li>
+      <li class="tip-row" id="108" tabindex="0" data-tags="hope discipline practice change focus climate anxiety agency resilience"><span class="tip-number">108</span>
+        <div class="tip"><span class="tip-strong">Hope is a discipline,</span> not a mood. Practice focusing on what can be changed, not just what's lost.</div>
+      </li>
+      <li class="tip-row" id="109" tabindex="0" data-tags="compassion struggle empathy self-compassion understanding kindness humanity perspective"><span class="tip-number">109</span>
+        <div class="tip"><span class="tip-strong">Everyone has a battle,</span> including you. Give people (and yourself) a break.</div>
+      </li>
+      <li class="tip-row" id="110" tabindex="0" data-tags="tribal thinking ethics partisanship good vs evil nuance moral complexity tribalism politics"><span class="tip-number">110</span>
+        <div class="tip"><span class="tip-strong">Be suspicious of any tribe</span> that says "the other side is evil." Ethics isn't team sports.</div>
+      </li>
+      <li class="tip-row" id="111" tabindex="0" data-tags="prediction explanation science forecasting truth testing validation future"><span class="tip-number">111</span>
+        <div class="tip"><span class="tip-strong">Prediction beats explanation;</span> true ideas see what's coming.</div>
+      </li>
+      <li class="tip-row" id="112" tabindex="0" data-tags="beliefs updating flexibility growth adaptation mental software learning change"><span class="tip-number">112</span>
+        <div class="tip"><span class="tip-strong">Update your beliefs,</span> just like you update your software.</div>
+      </li>
+      <li class="tip-row" id="113" tabindex="0" data-tags="relativism truth objectivity reality philosophy epistemology difficult truths moral realism"><span class="tip-number">113</span>
+        <div class="tip"><span class="tip-strong">Don&#x27;t hide behind &quot;it&#x27;s all relative;&quot;</span> some truths are hard but real.</div>
+      </li>
+      <li class="tip-row" id="114" tabindex="0" data-tags="acceptance action reality choice agency stoicism mindfulness empowerment"><span class="tip-number">114</span>
+        <div class="tip"><span class="tip-strong">Acceptance is active,</span> not passive. It means facing what is—then choosing what to do next.</div>
+      </li>
+      <li class="tip-row" id="115" tabindex="0" data-tags="financial anxiety system design insecurity control capitalism economics manipulation power"><span class="tip-number">115</span>
+        <div class="tip"><span class="tip-strong">Financial anxiety is by design.</span> Insecurity keeps you working, spending, and quiet.</div>
+      </li>
+      <li class="tip-row" id="116" tabindex="0" data-tags="science doubt skepticism testing method empiricism belief investigation"><span class="tip-number">116</span>
+        <div class="tip"><span class="tip-strong">Science is organized doubt,</span> not magic. It thrives by testing, not believing.</div>
+      </li>
+      <li class="tip-row" id="117" tabindex="0" data-tags="decency ethics humanity respect dignity morality objectification principles"><span class="tip-number">117</span>
+        <div class="tip"><span class="tip-strong">Being decent isn&#x27;t about rules,</span> it's about refusing to treat people as things.</div>
+      </li>
+      <li class="tip-row" id="118" tabindex="0" data-tags="self-perception villain good guy rationalization psychology moral blindness justification ego"><span class="tip-number">118</span>
+        <div class="tip"><span class="tip-strong">Nobody thinks they&#x27;re the villain.</span> Everyone frames themselves as the good guy, no matter how wild the logic.</div>
+      </li>
+      <li class="tip-row" id="119" tabindex="0" data-tags="time value boundaries dreams autonomy life purpose exploitation self-worth"><span class="tip-number">119</span>
+        <div class="tip"><span class="tip-strong">Your time is valuable.</span> Don't trade it all for someone else's dream.</div>
+      </li>
+      <li class="tip-row" id="120" tabindex="0" data-tags="compassion presence detachment engagement mindfulness connection awareness empathy"><span class="tip-number">120</span>
+        <div class="tip"><span class="tip-strong">Compassion isn&#x27;t detachment,</span> it's being present, not checking out.</div>
+      </li>
+      <li class="tip-row" id="121" tabindex="0" data-tags="world madness perception media information overload perspective history anxiety"><span class="tip-number">121</span>
+        <div class="tip"><span class="tip-strong">The world has always been mad.</span> You're just seeing more of it, faster.</div>
+      </li>
+      <li class="tip-row" id="122" tabindex="0" data-tags="testing science discipline cynicism empiricism verification method rigor"><span class="tip-number">122</span>
+        <div class="tip"><span class="tip-strong">Test it, or it&#x27;s not science.</span> That's discipline, not cynicism.</div>
+      </li>
+      <li class="tip-row" id="123" tabindex="0" data-tags="mistakes data learning failure growth experimentation resilience mindset"><span class="tip-number">123</span>
+        <div class="tip"><span class="tip-strong">Mistakes are data,</span> not defeat.</div>
+      </li>
+      <li class="tip-row" id="124" tabindex="0" data-tags="behavior identity ritual rehearsal transformation practice embodiment change"><span class="tip-number">124</span>
+        <div class="tip"><span class="tip-strong">Act the part,</span> and the mind follows; ritual is rehearsal for a new you.</div>
+      </li>
+      <li class="tip-row" id="125" tabindex="0" data-tags="tribal loyalty bias rationality us vs them self-awareness critical thinking groupthink perspective"><span class="tip-number">125</span>
+        <div class="tip"><span class="tip-strong">Doubt your own tribe.</span> The urge to see "us" as rational and "them" as lost is universal. Watch for it.</div>
+      </li>
+      <li class="tip-row" id="126" tabindex="0" data-tags="self-questioning principles balance conviction doubt integrity values authenticity"><span class="tip-number">126</span>
+        <div class="tip"><span class="tip-strong">Question yourself,</span> but stand for something real.</div>
+      </li>
+      <li class="tip-row" id="127" tabindex="0" data-tags="goodness consistency self-awareness repair growth accountability humanity improvement"><span class="tip-number">127</span>
+        <div class="tip"><span class="tip-strong">Nobody is consistently good.</span> The work is to notice when you're not—and repair.</div>
+      </li>
+      <li class="tip-row" id="128" tabindex="0" data-tags="transparency freedom visibility control privacy surveillance modern life boundaries"><span class="tip-number">128</span>
+        <div class="tip"><span class="tip-strong">Transparency isn&#x27;t always freedom;</span> the demand to always be visible is a new kind of control.</div>
+      </li>
+      <li class="tip-row" id="129" tabindex="0" data-tags="bias smugness self-awareness delusions humility psychology perception blind spots"><span class="tip-number">129</span>
+        <div class="tip"><span class="tip-strong">Assume you are also biased,</span> especially when you feel smug about "seeing through" others' delusions.</div>
+      </li>
+      <li class="tip-row" id="130" tabindex="0" data-tags="ethics complexity simplicity nuance morality judgment philosophy decision making"><span class="tip-number">130</span>
+        <div class="tip"><span class="tip-strong">Ethics is messy.</span> If it feels too simple, you're probably missing something.</div>
+      </li>
+      <li class="tip-row" id="131" tabindex="0" data-tags="community eco-anxiety collaboration support climate collective action mental health connection"><span class="tip-number">131</span>
+        <div class="tip"><span class="tip-strong">Community is the antidote to eco-anxiety.</span> Find others who care, and work together. It helps.</div>
+      </li>
+      <li class="tip-row" id="132" tabindex="0" data-tags="science bias perfection improvement objectivity method progress fallibility"><span class="tip-number">132</span>
+        <div class="tip"><span class="tip-strong">Science roots out bias,</span> even though it's never perfect.</div>
+      </li>
+      <li class="tip-row" id="133" tabindex="0" data-tags="wisdom humility realism balance knowledge perspective truth understanding"><span class="tip-number">133</span>
+        <div class="tip"><span class="tip-strong">Wisdom balances humility with realism.</span> </div>
+      </li>
+      <li class="tip-row" id="134" tabindex="0" data-tags="compassion anger leadership change effectiveness emotion influence strategy"><span class="tip-number">134</span>
+        <div class="tip"><span class="tip-strong">Lead with compassion,</span> not anger. It's more likely to change things.</div>
+      </li>
+      <li class="tip-row" id="135" tabindex="0" data-tags="virtue signaling virtue action authenticity hypocrisy behavior integrity results"><span class="tip-number">135</span>
+        <div class="tip"><span class="tip-strong">Don&#x27;t mistake virtue-signaling for actual virtue.</span> Talk is easy; small, real actions matter more.</div>
+      </li>
+      <li class="tip-row" id="136" tabindex="0" data-tags="self-forgiveness compassion friendship kindness mercy self-treatment healing grace"><span class="tip-number">136</span>
+        <div class="tip"><span class="tip-strong">Forgive yourself,</span> as fiercely as you'd forgive a friend.</div>
+      </li>
+      <li class="tip-row" id="137" tabindex="0" data-tags="guilt climate individual action systemic change carbon footprint environmentalism scale effectiveness"><span class="tip-number">137</span>
+        <div class="tip"><span class="tip-strong">Guilt won&#x27;t save the planet.</span> Individual action matters, but systemic change is always bigger than your carbon footprint.</div>
+      </li>
+      <li class="tip-row" id="138" tabindex="0" data-tags="letting go practice choice death preparation acceptance inevitability wisdom"><span class="tip-number">138</span>
+        <div class="tip"><span class="tip-strong">Practice letting go now,</span> because one day you'll have no choice. If you wait until the end, it's going to be much harder.</div>
+      </li>
+      <li class="tip-row" id="139" tabindex="0" data-tags="beliefs purpose certainty belonging status facts psychology function"><span class="tip-number">139</span>
+        <div class="tip"><span class="tip-strong">&quot;Crazy&quot; beliefs often serve a purpose.</span> They create certainty, belonging, or status—even if they ignore facts.</div>
+      </li>
+      <li class="tip-row" id="140" tabindex="0" data-tags="compassion boundaries burnout isolation balance self-care relationships sustainability"><span class="tip-number">140</span>
+        <div class="tip"><span class="tip-strong">Balance compassion with boundaries,</span> or you'll end up burned out or alone.</div>
+      </li>
+      <li class="tip-row" id="141" tabindex="0" data-tags="honesty changing mind facts flexibility truth adaptation integrity evidence"><span class="tip-number">141</span>
+        <div class="tip"><span class="tip-strong">Honesty means changing your mind,</span> when facts say so.</div>
+      </li>
+      <li class="tip-row" id="142" tabindex="0" data-tags="beliefs flexibility evolution adaptability growth change openness learning"><span class="tip-number">142</span>
+        <div class="tip"><span class="tip-strong">Hold beliefs lightly,</span> and let them evolve.</div>
+      </li>
+      <li class="tip-row" id="143" tabindex="0" data-tags="meritocracy myth upward mobility inequality social mobility economics fairness reality"><span class="tip-number">143</span>
+        <div class="tip"><span class="tip-strong">&quot;Meritocracy&quot; is mostly myth.</span> Upward mobility is rarer than we're told.</div>
+      </li>
+      <li class="tip-row" id="144" tabindex="0" data-tags="group defense tribal loyalty ideas being right loyalty psychology tribalism motivation"><span class="tip-number">144</span>
+        <div class="tip"><span class="tip-strong">People defend their group,</span> not just their ideas. Tribal loyalty is usually stronger than the desire to be right.</div>
+      </li>
+      <li class="tip-row" id="145" tabindex="0" data-tags="solutions imperfection perfectionism green lifestyle policy action avoidance progress"><span class="tip-number">145</span>
+        <div class="tip"><span class="tip-strong">Most solutions are imperfect.</span> Waiting for the "perfect" green lifestyle or policy is just another way to avoid action.</div>
+      </li>
+      <li class="tip-row" id="146" tabindex="0" data-tags="doubt strength science skepticism inquiry questioning method virtue"><span class="tip-number">146</span>
+        <div class="tip"><span class="tip-strong">Doubt is a strength,</span> not a flaw, in science.</div>
+      </li>
+      <li class="tip-row" id="147" tabindex="0" data-tags="world chaos fear loss perception logic understanding psychology empathy"><span class="tip-number">147</span>
+        <div class="tip"><span class="tip-strong">When the world feels upside-down,</span> start by asking what people are afraid of losing. Fear warps perception and logic.</div>
+      </li>
+      <li class="tip-row" id="148" tabindex="0" data-tags="burnout positivity saying yes boundaries self-loss toxic positivity balance authenticity"><span class="tip-number">148</span>
+        <div class="tip"><span class="tip-strong">You can burn out from too much positivity.</span> Saying yes to everything is just another way to lose yourself.</div>
+      </li>
+      <li class="tip-row" id="149" tabindex="0" data-tags="power seduction suppression grind culture choice benefits manipulation awareness"><span class="tip-number">149</span>
+        <div class="tip"><span class="tip-strong">Today&#x27;s power works through seduction,</span> not suppression; if you always "choose" to grind, ask who benefits.</div>
+      </li>
+      <li class="tip-row" id="150" tabindex="0" data-tags="ethics appearance doing right integrity character morality authenticity virtue"><span class="tip-number">150</span>
+        <div class="tip"><span class="tip-strong">Ethics isn&#x27;t about looking good,</span> it's about doing right when nobody's watching.</div>
+      </li>
+      <li class="tip-row" id="151" tabindex="0" data-tags="responsiveness perfectionism adaptability flexibility action improvement progress pragmatism"><span class="tip-number">151</span>
+        <div class="tip"><span class="tip-strong">Be responsive,</span> not perfect.</div>
+      </li>
+      <li class="tip-row" id="152" tabindex="0" data-tags="history normal nonsense humility knowledge certainty perspective change"><span class="tip-number">152</span>
+        <div class="tip"><span class="tip-strong">History will judge today&#x27;s &quot;normal&quot;</span> as tomorrow's nonsense. Be humble about what you know for sure.</div>
+      </li>
+      <li class="tip-row" id="153" tabindex="0" data-tags="advertising identity consumption manipulation desire marketing self-image influence"><span class="tip-number">153</span>
+        <div class="tip"><span class="tip-strong">Advertising sells identity,</span> not just stuff. You're being told what to want, not just what to buy.</div>
+      </li>
+      <li class="tip-row" id="154" tabindex="0" data-tags="connection boundaries privacy intimacy authenticity relationships sharing self-protection"><span class="tip-number">154</span>
+        <div class="tip"><span class="tip-strong">Real connection requires boundaries.</span> Not every part of you has to be seen or shared.</div>
+      </li>
+      <li class="tip-row" id="155" tabindex="0" data-tags="moving forward expectations reality acceptance pragmatism adaptation progress letting go"><span class="tip-number">155</span>
+        <div class="tip"><span class="tip-strong">To move forward,</span> stop clinging to how things "should" be— start working with what is.</div>
+      </li>
+      <li class="tip-row" id="156" tabindex="0" data-tags="ritual doorway brain shift transition signal psychology change"><span class="tip-number">156</span>
+        <div class="tip"><span class="tip-strong">Ritual is a doorway;</span> it signals to your brain that it's time to shift gears.</div>
+      </li>
+      <li class="tip-row" id="157" tabindex="0" data-tags="resilience collective support community burden sharing strength connection mutual aid"><span class="tip-number">157</span>
+        <div class="tip"><span class="tip-strong">Remember: resilience is collective.</span> You don't have to carry it alone.</div>
+      </li>
+      <li class="tip-row" id="158" tabindex="0" data-tags="letting go resignation surrender reality agency acceptance empowerment balance"><span class="tip-number">158</span>
+        <div class="tip"><span class="tip-strong">You can let go without resigning.</span> Surrender to reality, but don't surrender your agency.</div>
+      </li>
+      <li class="tip-row" id="159" tabindex="0" data-tags="acceptance clarity noise action reaction frustration peace effectiveness"><span class="tip-number">159</span>
+        <div class="tip"><span class="tip-strong">Acceptance clears the noise,</span> so you can act with clarity, not just react from frustration.</div>
+      </li>
     </ol>
   </div>
   <footer>
@@ -559,8 +773,41 @@
       notice.classList.remove('visible');
     }, 1500);
   }
+
+  // Search functionality
+  function searchTips() {
+    const searchInput = document.getElementById('searchInput');
+    const tipList = document.getElementById('tipList');
+    const noResults = document.getElementById('noResults');
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    const allTips = tipList.querySelectorAll('.tip-row');
+    
+    let visibleCount = 0;
+    
+    allTips.forEach(tip => {
+      const tipContent = tip.textContent.toLowerCase();
+      const tipTags = (tip.getAttribute('data-tags') || '').toLowerCase();
+      const searchableContent = tipContent + ' ' + tipTags;
+      
+      if (searchTerm === '' || searchableContent.includes(searchTerm)) {
+        tip.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        tip.classList.add('hidden');
+      }
+    });
+    
+    // Show/hide no results message
+    if (visibleCount === 0 && searchTerm !== '') {
+      noResults.style.display = 'block';
+    } else {
+      noResults.style.display = 'none';
+    }
+  }
+  
+  // Bind search event listener
+  document.getElementById('searchInput').addEventListener('input', searchTips);
 </script>
 
 </body>
 </html>
-

@@ -1,0 +1,637 @@
+tips:
+  - number: 1
+    keyword: "Confirmation bias"
+    content: "means you'll believe something is true just because you already think it is - not because it is. Watch how you Google."
+    tags: ["cognitive bias", "research", "google", "search", "evidence", "beliefs", "truth", "psychology"]
+  - number: 2
+    keyword: "The news cycle"
+    content: "is optimized for engagement, not accuracy. That means outrage, fear, and conflict - not context or solutions."
+    tags: ["media", "journalism", "clickbait", "engagement", "outrage", "fear", "misinformation", "news"]
+  - number: 3
+    keyword: "Social media"
+    content: "shortens your attention span and raises your anxiety. The more you use it, the worse you'll think the world is."
+    tags: ["attention", "anxiety", "depression", "scrolling", "apps", "phone", "mental health", "addiction"]
+  - number: 4
+    keyword: "Dopamine"
+    content: "is about <em>anticipation</em>, not satisfaction. That's why you keep scrolling even when it's not fun."
+    tags: ["neuroscience", "addiction", "scrolling", "satisfaction", "reward system", "brain chemistry", "social media"]
+  - number: 5
+    keyword: "The brain"
+    content: "doesn't finish developing until about 25 - especially the part that resists impulse. Be patient with your poor past self."
+    tags: ["neuroscience", "development", "impulse control", "prefrontal cortex", "young adults", "decision making", "self compassion"]
+  - number: 6
+    keyword: "People mirror emotions."
+    content: "If you're calm, they calm. If you're angry, they escalate. You choose the feedback loop."
+    tags: ["emotional contagion", "relationships", "communication", "conflict", "de-escalation", "empathy", "social psychology"]
+  - number: 7
+    keyword: "The sunk cost fallacy"
+    content: "keeps people in bad jobs, relationships, and habits. Just because you've invested time doesn't mean you should keep going."
+    tags: ["cognitive bias", "decision making", "economics", "relationships", "career", "habits", "letting go", "quitting"]
+  - number: 8
+    keyword: "Sleep deprivation"
+    content: "makes you impulsive and emotionally irrational. Don't try to \"power through\" - you're becoming dumber and more reactive."
+    tags: ["sleep", "health", "productivity", "emotional regulation", "impulse control", "cognitive function", "rest"]
+  - number: 9
+    keyword: "Trauma"
+    content: "can be passed epigenetically - not just culturally. Your parents' or grandparents' stress can shape your physiology."
+    tags: ["trauma", "epigenetics", "generational", "family", "genetics", "stress", "inheritance", "healing"]
+  - number: 10
+    keyword: "Most of your behavior"
+    content: "is unconscious. You rationalize after the fact. Learn to watch what you do, not what you <em>say</em> you believe."
+    tags: ["unconscious", "self awareness", "rationalization", "behavior", "psychology", "mindfulness", "observation"]
+  - number: 11
+    keyword: "The availability heuristic"
+    content: "makes rare events feel common. Seeing one plane crash doesn't make flying dangerous."
+    tags: ["cognitive bias", "risk assessment", "media", "probability", "fear", "flying", "statistics", "perception"]
+  - number: 12
+    keyword: "Corporations"
+    content: "use psychological tricks to keep you hooked. Infinite scroll, red badges, \"limited time\" offers - it's behavioural design."
+    tags: ["capitalism", "manipulation", "design", "addiction", "marketing", "psychology", "consumerism", "attention economy"]
+  - number: 13
+    keyword: "Multitasking"
+    content: "makes you worse at everything. Task-switching is not free - it burns cognitive fuel and degrades memory."
+    tags: ["productivity", "focus", "attention", "cognitive load", "efficiency", "task switching", "concentration", "work"]
+  - number: 14
+    keyword: "Your gut"
+    content: "affects your mind. An unhealthy microbiome can increase anxiety and depression."
+    tags: ["gut health", "microbiome", "mental health", "anxiety", "depression", "nutrition", "gut-brain axis", "health"]
+  - number: 15
+    keyword: "Exercise"
+    content: "is a proven antidepressant. Regular movement is more effective than pills for many people."
+    tags: ["exercise", "mental health", "depression", "endorphins", "movement", "fitness", "therapy", "natural remedies"]
+  - number: 16
+    keyword: "Groupthink"
+    content: "happens fast. If everyone in a room agrees too easily, something important isn't being said."
+    tags: ["group dynamics", "conformity", "decision making", "dissent", "critical thinking", "workplace", "meetings", "leadership"]
+  - number: 17
+    keyword: "The placebo effect"
+    content: "is real. Belief changes physiology. Use it ethically, not cynically."
+    tags: ["placebo", "belief", "mind-body", "healing", "medicine", "psychology", "expectation", "ethics"]
+  - number: 18
+    keyword: "Cognitive dissonance"
+    content: "makes people double down when shown they're wrong. Don't argue to win - argue to open."
+    tags: ["cognitive dissonance", "arguments", "belief", "persuasion", "communication", "bias", "defensiveness", "dialogue"]
+  - number: 19
+    keyword: "No one"
+    content: "is paying as much attention to you as you think. This is liberating - stop performing."
+    tags: ["spotlight effect", "self consciousness", "social anxiety", "performance", "authenticity", "freedom", "psychology"]
+  - number: 20
+    keyword: "You are not a fixed identity."
+    content: "The self is fluid, context-dependent, and largely constructed after the fact."
+    tags: ["identity", "self", "personality", "change", "growth", "psychology", "philosophy", "fluidity", "construction"]
+  - number: 21
+    keyword: "AI doesn't understand"
+    content: "- it predicts. It's guessing the next likely word, not thinking."
+    tags: ["artificial intelligence", "AI", "machine learning", "understanding", "prediction", "thinking", "technology", "language models"]
+  - number: 22
+    keyword: "The Dunning-Kruger effect"
+    content: "means the most confident people are often the least competent. Be skeptical of loud certainty."
+    tags: ["Dunning-Kruger", "confidence", "competence", "expertise", "humility", "overconfidence", "knowledge", "skepticism"]
+  - number: 23
+    keyword: "Capitalism"
+    content: "doesn't reward what's meaningful - it rewards what's profitable. This is why many valuable jobs are underpaid."
+    tags: ["capitalism", "economics", "meaning", "profit", "work", "teachers", "healthcare", "social workers", "value"]
+  - number: 24
+    keyword: "People don't act based on facts;"
+    content: "they act based on stories that <em>feel</em> true. Understand narrative, not just logic."
+    tags: ["narrative", "storytelling", "persuasion", "emotion", "logic", "decision making", "communication", "human behavior"]
+  - number: 25
+    keyword: "The \"Just World Fallacy\""
+    content: "makes people blame victims. The world isn't fair - bad things happen to good people."
+    tags: ["just world fallacy", "victim blaming", "fairness", "cognitive bias", "justice", "compassion", "inequality"]
+  - number: 26
+    keyword: "Your phone"
+    content: "steals your presence. Even when it's in your pocket, it reduces your working memory."
+    tags: ["smartphone", "attention", "presence", "working memory", "distraction", "technology", "mindfulness", "focus"]
+  - number: 27
+    keyword: "Mindfulness"
+    content: "isn't about peace - it's about awareness. You won't always feel better, but you'll see more clearly."
+    tags: ["mindfulness", "awareness", "meditation", "clarity", "presence", "observation", "consciousness", "peace"]
+  - number: 28
+    keyword: "Depression"
+    content: "isn't always sadness - it's often flatness, numbness, or irritation. Learn the signs early."
+    tags: ["depression", "mental health", "symptoms", "numbness", "irritability", "flatness", "early warning", "recognition"]
+  - number: 29
+    keyword: "Repression"
+    content: "doesn't erase feelings - it buries them until they leak out elsewhere. Usually at the worst time."
+    tags: ["repression", "emotions", "suppression", "emotional processing", "psychology", "unconscious", "healing", "feelings"]
+  - number: 30
+    keyword: "Your nervous system"
+    content: "learns safety or danger from your relationships. Regulate with people, not just alone."
+    tags: ["nervous system", "co-regulation", "relationships", "safety", "trauma", "connection", "healing", "social support"]
+  - number: 31
+    keyword: "The body"
+    content: "holds memory. Trauma often appears as pain, tightness, shutdown - not just thoughts."
+    tags: ["body", "trauma", "somatic", "embodied memory", "physical symptoms", "tension", "pain", "body-mind connection"]
+  - number: 32
+    keyword: "You can have compassion"
+    content: "and still set boundaries. Letting people walk over you isn't kindness - it's fear."
+    tags: ["boundaries", "compassion", "kindness", "fear", "self-respect", "relationships", "assertiveness", "self-care"]
+  - number: 33
+    keyword: "People don't change from shame."
+    content: "They change when they feel safe enough to see clearly."
+    tags: ["shame", "change", "safety", "growth", "transformation", "self-compassion", "healing", "psychological safety"]
+  - number: 34
+    keyword: "Every social media post"
+    content: "is curated. You're comparing your behind-the-scenes to someone's highlight reel."
+    tags: ["social media", "comparison", "curation", "authenticity", "highlight reel", "self-esteem", "reality", "perception"]
+  - number: 35
+    keyword: "FOMO"
+    content: "is a manipulation tool. You're not missing out - you're being sold a feeling."
+    tags: ["FOMO", "fear of missing out", "manipulation", "marketing", "anxiety", "contentment", "present moment", "advertising"]
+  - number: 36
+    keyword: "Psychotropic drugs"
+    content: "don't \"fix\" you - they create new baselines. Sometimes useful, sometimes numbing. Be informed."
+    tags: ["medication", "antidepressants", "mental health", "psychiatry", "informed consent", "side effects", "treatment", "therapy"]
+  - number: 37
+    keyword: "Silence"
+    content: "is powerful. Most people rush to fill it because they're uncomfortable with themselves."
+    tags: ["silence", "discomfort", "self-awareness", "communication", "presence", "solitude", "inner work", "reflection"]
+  - number: 38
+    keyword: "Most goals"
+    content: "are just proxies for emotion. You don't want a six-pack - you want to feel respected or in control."
+    tags: ["goals", "motivation", "emotions", "self-worth", "validation", "underlying needs", "intrinsic motivation", "psychology"]
+  - number: 39
+    keyword: "Your attention"
+    content: "is the most valuable thing you own. Guard it like your life depends on it - because it does."
+    tags: ["attention", "focus", "mindfulness", "distraction", "precious resource", "awareness", "present moment", "quality of life"]
+  - number: 40
+    keyword: "Desire"
+    content: "is manufactured. Ads and influencers are <em>designed</em> to make you feel a lack."
+    tags: ["desire", "advertising", "influencers", "marketing", "manipulation", "consumerism", "lack", "manufactured need"]
+  - number: 41
+    keyword: "People can't think clearly when they're scared."
+    content: "Fear hijacks the brain's executive function. Start with safety."
+    tags: ["fear", "anxiety", "executive function", "safety", "threat response", "clear thinking", "amygdala hijack", "psychology"]
+  - number: 42
+    keyword: "Procrastination"
+    content: "is often perfectionism in disguise. You're afraid of doing something \"bad,\" so you don't do it at all."
+    tags: ["procrastination", "perfectionism", "fear", "paralysis", "productivity", "self-sabotage", "avoidance", "action"]
+  - number: 43
+    keyword: "Solitude"
+    content: "is not loneliness. Learn to be with yourself, or you'll seek company that fills the void poorly."
+    tags: ["solitude", "loneliness", "being alone", "self-relationship", "codependency", "inner work", "self-sufficiency", "relationships"]
+  - number: 44
+    keyword: "\"Should\""
+    content: "is usually someone else's voice in your head. Replace it with \"do I <em>want</em> to\" or \"is this <em>true</em>?\""
+    tags: ["should", "expectations", "inner critic", "authenticity", "choice", "autonomy", "self-direction", "conditioning"]
+  - number: 45
+    keyword: "We evolved to survive,"
+    content: "not to be happy. But we can train for meaning, connection, and resilience."
+    tags: ["evolution", "survival", "happiness", "meaning", "connection", "resilience", "human nature", "training"]
+  - number: 46
+    keyword: "Most modern suffering"
+    content: "is symbolic. You're not running from tigers - you're ruminating about an email."
+    tags: ["modern suffering", "rumination", "symbolic threats", "overthinking", "anxiety", "perspective", "first world problems", "mental loops"]
+  - number: 47
+    keyword: "Consumerism"
+    content: "sells identity. You're not buying a product - you're buying a story about who you are."
+    tags: ["consumerism", "identity", "marketing", "self-image", "materialism", "branding", "status", "consumer culture"]
+  - number: 48
+    keyword: "When in doubt, breathe."
+    content: "Long, slow exhales calm your nervous system. It's biology, not woo."
+    tags: ["breathing", "nervous system", "anxiety", "calm", "biology", "physiology", "stress relief", "regulation"]
+  - number: 49
+    keyword: "It's okay not to know."
+    content: "Doubt is the beginning of wisdom, not the absence of it."
+    tags: ["doubt", "wisdom", "uncertainty", "knowledge", "humility", "learning", "philosophy", "intellectual growth"]
+  - number: 50
+    keyword: "You will die."
+    content: "Memento mori. Use it to focus on what matters."
+    tags: ["death", "memento mori", "mortality", "priorities", "philosophy", "focus", "meaning", "stoicism"]
+  - number: 51
+    keyword: "Your brain rewards prediction,"
+    content: "not truth. It prefers a wrong but familiar answer to an unfamiliar but correct one."
+    tags: ["prediction", "cognitive bias", "familiarity", "brain", "neuroscience", "truth", "pattern recognition", "comfort zone"]
+  - number: 52
+    keyword: "Most people don't listen -"
+    content: "they wait to speak. Learn to actually listen and you'll understand far more than others do."
+    tags: ["listening", "communication", "understanding", "relationships", "conversation", "empathy", "active listening", "social skills"]
+  - number: 53
+    keyword: "\"Overthinking\""
+    content: "is often unprocessed emotion disguised as logic. Get out of your head by feeling what's beneath the thoughts."
+    tags: ["overthinking", "emotion", "rumination", "logic", "feelings", "emotional processing", "mental loops", "embodiment"]
+  - number: 54
+    keyword: "The phrase \"that's just how I am\""
+    content: "is usually a defense, not a fact. Personality isn't fixed."
+    tags: ["personality", "change", "growth", "defense mechanisms", "fixed mindset", "neuroplasticity", "self-improvement", "identity"]
+  - number: 55
+    keyword: "\"Toxic positivity\""
+    content: "dismisses pain in the name of cheerfulness. Sometimes things are just hard, and that's okay to admit."
+    tags: ["toxic positivity", "pain", "validation", "cheerfulness", "emotional honesty", "difficulty", "acceptance", "mental health"]
+  - number: 56
+    keyword: "The average adult attention span"
+    content: "is now under 8 seconds. This is a technological problem, not a moral failing."
+    tags: ["attention span", "technology", "distraction", "focus", "moral failing", "digital age", "concentration", "media"]
+  - number: 57
+    keyword: "You can feel two things at once."
+    content: "Grief and gratitude. Anger and love. Complexity is human."
+    tags: ["emotional complexity", "grief", "gratitude", "anger", "love", "human nature", "nuance", "feelings"]
+  - number: 58
+    keyword: "Being busy"
+    content: "is often a way to avoid yourself. Stillness reveals what you've been running from."
+    tags: ["busyness", "avoidance", "stillness", "self-awareness", "running away", "introspection", "presence", "inner work"]
+  - number: 59
+    keyword: "Comparison"
+    content: "is self-harm dressed as ambition. Measure yourself by your values, not other people's highlight reels."
+    tags: ["comparison", "self-harm", "ambition", "values", "highlight reel", "social media", "self-worth", "authenticity"]
+  - number: 60
+    keyword: "The body can't distinguish"
+    content: "between real and imagined threat. That anxious text you haven't replied to? Same cortisol as danger."
+    tags: ["body", "threat response", "anxiety", "cortisol", "stress hormones", "physiology", "fight or flight", "modern stress"]
+  - number: 61
+    keyword: "Shame"
+    content: "is about who you <em>are</em>; guilt is about what you <em>did</em>. One is paralyzing, the other is useful."
+    tags: ["shame", "guilt", "identity", "behavior", "paralysis", "useful emotion", "self-worth", "psychology"]
+  - number: 62
+    keyword: "People tend to remember"
+    content: "how you made them <em>feel</em>, not what you said. Especially in conflict."
+    tags: ["feelings", "memory", "conflict", "emotional impact", "relationships", "communication", "lasting impression", "empathy"]
+  - number: 63
+    keyword: "Reassurance"
+    content: "often reinforces anxiety. Learn to sit with discomfort instead of escaping it."
+    tags: ["reassurance", "anxiety", "discomfort", "avoidance", "tolerance", "sitting with feelings", "emotional regulation", "coping"]
+  - number: 64
+    keyword: "Saying \"I'm fine\""
+    content: "when you're not doesn't build strength - it builds distance."
+    tags: ["emotional honesty", "fine", "strength", "distance", "vulnerability", "relationships", "authenticity", "connection"]
+  - number: 65
+    keyword: "Wealth"
+    content: "is not the same as freedom. And freedom is not the same as peace."
+    tags: ["wealth", "freedom", "peace", "money", "philosophy", "values", "happiness", "life goals"]
+  - number: 66
+    keyword: "You can learn a lot"
+    content: "about someone by how they handle \"no.\" Rejection reveals character."
+    tags: ["rejection", "character", "boundaries", "response", "personality", "relationships", "resilience", "maturity"]
+  - number: 67
+    keyword: "Discomfort"
+    content: "is the price of growth. If you want change, expect awkwardness, tension, and emotional friction."
+    tags: ["discomfort", "growth", "change", "awkwardness", "tension", "emotional friction", "development", "transformation"]
+  - number: 68
+    keyword: "Saying less"
+    content: "is often more powerful. Stillness in speech is clarity in mind."
+    tags: ["communication", "silence", "power", "clarity", "mindfulness", "restraint", "wisdom", "presence"]
+  - number: 69
+    keyword: "Most apologies fail"
+    content: "because they're self-protective. A real apology names the harm and expects nothing in return."
+    tags: ["apologies", "self-protection", "harm", "accountability", "relationships", "repair", "empathy", "responsibility"]
+  - number: 70
+    keyword: "You'll never be fully ready."
+    content: "If you wait until you are, you'll never move."
+    tags: ["readiness", "action", "paralysis", "perfectionism", "procrastination", "courage", "momentum", "starting"]
+  - number: 71
+    keyword: "Friendship in adulthood"
+    content: "takes intentional effort. Don't wait to \"feel like it\" - schedule connection."
+    tags: ["friendship", "adulthood", "intentional effort", "connection", "relationships", "scheduling", "social life", "maintenance"]
+  - number: 72
+    keyword: "You don't need to monetize every passion."
+    content: "Not everything has to be a hustle."
+    tags: ["monetization", "passion", "hustle culture", "creativity", "hobby", "capitalism", "joy", "intrinsic value"]
+  - number: 73
+    keyword: "Strong opinions"
+    content: "are often hiding insecurity. Certainty can be a defence mechanism."
+    tags: ["strong opinions", "insecurity", "certainty", "defense mechanism", "confidence", "vulnerability", "psychology", "ego"]
+  - number: 74
+    keyword: "Long-term relationships"
+    content: "are built on repair, not perfection. Learn to fight <em>well</em>."
+    tags: ["relationships", "repair", "perfection", "conflict", "fighting", "long-term", "maintenance", "communication"]
+  - number: 75
+    keyword: "Modern food"
+    content: "hijacks your biology. It's not just about willpower - it's by design."
+    tags: ["food", "biology", "willpower", "design", "processed food", "nutrition", "addiction", "industry manipulation"]
+  - number: 76
+    keyword: "You can't think your way out of a body problem."
+    content: "Sometimes the answer is breath, sleep, movement - not insight."
+    tags: ["body", "thinking", "breath", "sleep", "movement", "embodiment", "somatic", "physical solutions"]
+  - number: 77
+    keyword: "\"Tired but wired\""
+    content: "is a sign of nervous system dysregulation. You're not lazy - you're overstimulated."
+    tags: ["tired but wired", "nervous system", "dysregulation", "lazy", "overstimulation", "burnout", "exhaustion", "stress"]
+  - number: 78
+    keyword: "Goals without systems"
+    content: "are fantasies. Build habits, not heroic plans."
+    tags: ["goals", "systems", "fantasies", "habits", "planning", "consistency", "implementation", "sustainability"]
+  - number: 79
+    keyword: "Most feedback"
+    content: "is projection. Take what's useful. Leave the rest."
+    tags: ["feedback", "projection", "criticism", "boundaries", "discernment", "psychology", "relationships", "self-protection"]
+  - number: 80
+    keyword: "If your life feels empty,"
+    content: "it might be full of the wrong things."
+    tags: ["emptiness", "fulfillment", "wrong things", "values", "priorities", "meaning", "life satisfaction", "alignment"]
+  - number: 81
+    keyword: "\"Self-care\""
+    content: "isn't bubble baths - it's doing the uncomfortable stuff that keeps you grounded long-term."
+    tags: ["self-care", "bubble baths", "discomfort", "grounding", "long-term", "maintenance", "discipline", "wellness"]
+  - number: 82
+    keyword: "Labels"
+    content: "can help or trap. Use them for understanding, not identity cages."
+    tags: ["labels", "identity", "understanding", "cages", "categorization", "flexibility", "self-concept", "psychology"]
+  - number: 83
+    keyword: "Silencing your needs"
+    content: "isn't maturity - it's learned helplessness."
+    tags: ["needs", "silencing", "maturity", "learned helplessness", "self-advocacy", "boundaries", "psychology", "conditioning"]
+  - number: 84
+    keyword: "Your nervous system"
+    content: "is shaped by your childhood environment. But it's not fixed."
+    tags: ["nervous system", "childhood", "environment", "neuroplasticity", "trauma", "development", "healing", "change"]
+  - number: 85
+    keyword: "Most people are terrified"
+    content: "of real intimacy. Vulnerability feels like danger to a brain wired for survival."
+    tags: ["intimacy", "vulnerability", "danger", "survival", "brain", "fear", "connection", "relationships"]
+  - number: 86
+    keyword: "You're allowed to grieve"
+    content: "dreams that no longer fit. Letting go is not failure."
+    tags: ["grief", "dreams", "letting go", "failure", "change", "acceptance", "loss", "transition"]
+  - number: 87
+    keyword: "A regulated nervous system"
+    content: "feels boring at first if you're used to chaos. Stability isn't apathy."
+    tags: ["regulated", "nervous system", "boring", "chaos", "stability", "apathy", "calm", "peace"]
+  - number: 88
+    keyword: "Not everything is trauma -"
+    content: "but everything <em>affects</em> you. Validating your experience doesn't require dramatizing it."
+    tags: ["trauma", "validation", "experience", "dramatization", "impact", "nuance", "psychology", "perspective"]
+  - number: 89
+    keyword: "Doing something poorly"
+    content: "is better than doing nothing. You learn by trying, not by waiting for perfection."
+    tags: ["action", "perfectionism", "learning", "trying", "progress", "imperfection", "experimentation", "growth"]
+  - number: 90
+    keyword: "The \"self\""
+    content: "is a process, not a thing. There's no core \"you\" - just patterns, habits, and stories you can rewrite."
+    tags: ["self", "process", "identity", "patterns", "habits", "stories", "rewrite", "philosophy"]
+  - number: 91
+    keyword: "We live in a meaning crisis."
+    content: "That doesn't mean nothing matters - it means you have to <em>choose</em> what matters."
+    tags: ["meaning crisis", "choice", "values", "purpose", "nihilism", "philosophy", "intentionality", "modern life"]
+  - number: 92
+    keyword: "If you don't define success,"
+    content: "someone else will. Probably an algorithm or a marketing team."
+    tags: ["success", "definition", "algorithm", "marketing", "autonomy", "values", "external influence", "authenticity"]
+  - number: 93
+    keyword: "Cynicism"
+    content: "is lazy self-protection. It's fear wearing the mask of intelligence."
+    tags: ["cynicism", "self-protection", "fear", "intelligence", "defense mechanism", "vulnerability", "lazy", "mask"]
+  - number: 94
+    keyword: "Beauty isn't shallow."
+    content: "Aesthetics can be grounding, healing, and profound. Curate your space with intention."
+    tags: ["beauty", "aesthetics", "grounding", "healing", "profound", "space", "intention", "environment"]
+  - number: 95
+    keyword: "Technology outpaced culture."
+    content: "Your brain is using ancient tools in a digital war zone."
+    tags: ["technology", "culture", "brain", "ancient tools", "digital", "evolution", "adaptation", "mismatch"]
+  - number: 96
+    keyword: "Learning to say \"I don't know\""
+    content: "might be the most underrated skill of all."
+    tags: ["humility", "unknown", "skill", "learning", "intellectual honesty", "wisdom", "uncertainty", "knowledge"]
+  - number: 97
+    keyword: "Art is necessary."
+    content: "Not because it's productive, but because it speaks when nothing else can."
+    tags: ["art", "necessary", "productivity", "expression", "communication", "creativity", "human nature", "meaning"]
+  - number: 98
+    keyword: "Meaning doesn't arrive."
+    content: "It's made, moment by moment, in how you show up."
+    tags: ["meaning", "creation", "presence", "showing up", "intentionality", "purpose", "philosophy", "engagement"]
+  - number: 99
+    keyword: "You are not behind."
+    content: "The timeline is a myth. The game is rigged. Live anyway."
+    tags: ["behind", "timeline", "myth", "rigged", "comparison", "social pressure", "authenticity", "rebellion"]
+  - number: 100
+    keyword: "Survival is not enough."
+    content: "Pay attention. Wake up. Participate."
+    tags: ["survival", "attention", "awakening", "participation", "engagement", "consciousness", "mindfulness", "life"]
+  - number: 101
+    keyword: "Challenge authority,"
+    content: "but know that genuine expertise matters. An expert's hard-won knowledge outweighs your Google search or Facebook thread-especially in their own field."
+    tags: ["authority", "expertise", "knowledge", "google", "facebook", "research", "credentials", "critical thinking"]
+  - number: 102
+    keyword: "Flexibility beats certainty."
+    content: "The world changes fast. Being adaptive is a superpower-clinging to fixed views or plans is a fast track to irrelevance."
+    tags: ["flexibility", "certainty", "adaptation", "change", "superpower", "fixed views", "relevance", "agility"]
+  - number: 103
+    keyword: "Radical rest is resistance."
+    content: "Refusing to always be \"on\" is a way to reclaim your life."
+    tags: ["rest", "resistance", "boundaries", "reclaim", "modern life", "burnout", "self-care", "rebellion"]
+  - number: 104
+    keyword: "Facts exist,"
+    content: "even when filtered through perspective."
+    tags: ["truth", "objectivity", "perspective", "reality", "knowledge", "facts", "relativism", "epistemology"]
+  - number: 105
+    keyword: "Hypocrisy is a feature,"
+    content: "not a bug, of group dynamics. Humans bend their morals for their \"side\" all the time."
+    tags: ["hypocrisy", "group dynamics", "morals", "tribal loyalty", "human nature", "consistency", "bias", "psychology"]
+  - number: 106
+    keyword: "Treat life as a feedback loop—"
+    content: "listen, adjust, repeat."
+    tags: ["feedback", "adaptation", "learning", "iteration", "growth", "flexibility", "systems thinking", "improvement"]
+  - number: 107
+    keyword: "Making meaning takes practice;"
+    content: "ritual is one way to rehearse what matters."
+    tags: ["meaning", "practice", "ritual", "rehearsal", "purpose", "intentionality", "habits", "values"]
+  - number: 108
+    keyword: "Hope is a discipline,"
+    content: "not a mood. Practice focusing on what can be changed, not just what's lost."
+    tags: ["hope", "discipline", "practice", "change", "focus", "climate anxiety", "agency", "resilience"]
+  - number: 109
+    keyword: "Everyone has a battle,"
+    content: "including you. Give people (and yourself) a break."
+    tags: ["compassion", "struggle", "empathy", "self-compassion", "understanding", "kindness", "humanity", "perspective"]
+  - number: 110
+    keyword: "Be suspicious of any tribe"
+    content: "that says \"the other side is evil.\" Ethics isn't team sports."
+    tags: ["tribal thinking", "ethics", "partisanship", "good vs evil", "nuance", "moral complexity", "tribalism", "politics"]
+  - number: 111
+    keyword: "Prediction beats explanation;"
+    content: "true ideas see what's coming."
+    tags: ["prediction", "explanation", "science", "forecasting", "truth", "testing", "validation", "future"]
+  - number: 112
+    keyword: "Update your beliefs,"
+    content: "just like you update your software."
+    tags: ["beliefs", "updating", "flexibility", "growth", "adaptation", "mental software", "learning", "change"]
+  - number: 113
+    keyword: "Don't hide behind \"it's all relative;\""
+    content: "some truths are hard but real."
+    tags: ["relativism", "truth", "objectivity", "reality", "philosophy", "epistemology", "difficult truths", "moral realism"]
+  - number: 114
+    keyword: "Acceptance is active,"
+    content: "not passive. It means facing what is—then choosing what to do next."
+    tags: ["acceptance", "action", "reality", "choice", "agency", "stoicism", "mindfulness", "empowerment"]
+  - number: 115
+    keyword: "Financial anxiety is by design."
+    content: "Insecurity keeps you working, spending, and quiet."
+    tags: ["financial anxiety", "system design", "insecurity", "control", "capitalism", "economics", "manipulation", "power"]
+  - number: 116
+    keyword: "Science is organized doubt,"
+    content: "not magic. It thrives by testing, not believing."
+    tags: ["science", "doubt", "skepticism", "testing", "method", "empiricism", "belief", "investigation"]
+  - number: 117
+    keyword: "Being decent isn't about rules,"
+    content: "it's about refusing to treat people as things."
+    tags: ["decency", "ethics", "humanity", "respect", "dignity", "morality", "objectification", "principles"]
+  - number: 118
+    keyword: "Nobody thinks they're the villain."
+    content: "Everyone frames themselves as the good guy, no matter how wild the logic."
+    tags: ["self-perception", "villain", "good guy", "rationalization", "psychology", "moral blindness", "justification", "ego"]
+  - number: 119
+    keyword: "Your time is valuable."
+    content: "Don't trade it all for someone else's dream."
+    tags: ["time", "value", "boundaries", "dreams", "autonomy", "life purpose", "exploitation", "self-worth"]
+  - number: 120
+    keyword: "Compassion isn't detachment,"
+    content: "it's being present, not checking out."
+    tags: ["compassion", "presence", "detachment", "engagement", "mindfulness", "connection", "awareness", "empathy"]
+  - number: 121
+    keyword: "The world has always been mad."
+    content: "You're just seeing more of it, faster."
+    tags: ["world", "madness", "perception", "media", "information overload", "perspective", "history", "anxiety"]
+  - number: 122
+    keyword: "Test it, or it's not science."
+    content: "That's discipline, not cynicism."
+    tags: ["testing", "science", "discipline", "cynicism", "empiricism", "verification", "method", "rigor"]
+  - number: 123
+    keyword: "Mistakes are data,"
+    content: "not defeat."
+    tags: ["mistakes", "data", "learning", "failure", "growth", "experimentation", "resilience", "mindset"]
+  - number: 124
+    keyword: "Act the part,"
+    content: "and the mind follows; ritual is rehearsal for a new you."
+    tags: ["behavior", "identity", "ritual", "rehearsal", "transformation", "practice", "embodiment", "change"]
+  - number: 125
+    keyword: "Doubt your own tribe."
+    content: "The urge to see \"us\" as rational and \"them\" as lost is universal. Watch for it."
+    tags: ["tribal loyalty", "bias", "rationality", "us vs them", "self-awareness", "critical thinking", "groupthink", "perspective"]
+  - number: 126
+    keyword: "Question yourself,"
+    content: "but stand for something real."
+    tags: ["self-questioning", "principles", "balance", "conviction", "doubt", "integrity", "values", "authenticity"]
+  - number: 127
+    keyword: "Nobody is consistently good."
+    content: "The work is to notice when you're not—and repair."
+    tags: ["goodness", "consistency", "self-awareness", "repair", "growth", "accountability", "humanity", "improvement"]
+  - number: 128
+    keyword: "Transparency isn't always freedom;"
+    content: "the demand to always be visible is a new kind of control."
+    tags: ["transparency", "freedom", "visibility", "control", "privacy", "surveillance", "modern life", "boundaries"]
+  - number: 129
+    keyword: "Assume you are also biased,"
+    content: "especially when you feel smug about \"seeing through\" others' delusions."
+    tags: ["bias", "smugness", "self-awareness", "delusions", "humility", "psychology", "perception", "blind spots"]
+  - number: 130
+    keyword: "Ethics is messy."
+    content: "If it feels too simple, you're probably missing something."
+    tags: ["ethics", "complexity", "simplicity", "nuance", "morality", "judgment", "philosophy", "decision making"]
+  - number: 131
+    keyword: "Community is the antidote to eco-anxiety."
+    content: "Find others who care, and work together. It helps."
+    tags: ["community", "eco-anxiety", "collaboration", "support", "climate", "collective action", "mental health", "connection"]
+  - number: 132
+    keyword: "Science roots out bias,"
+    content: "even though it's never perfect."
+    tags: ["science", "bias", "perfection", "improvement", "objectivity", "method", "progress", "fallibility"]
+  - number: 133
+    keyword: "Wisdom balances humility with realism."
+    content: ""
+    tags: ["wisdom", "humility", "realism", "balance", "knowledge", "perspective", "truth", "understanding"]
+  - number: 134
+    keyword: "Lead with compassion,"
+    content: "not anger. It's more likely to change things."
+    tags: ["compassion", "anger", "leadership", "change", "effectiveness", "emotion", "influence", "strategy"]
+  - number: 135
+    keyword: "Don't mistake virtue-signaling for actual virtue."
+    content: "Talk is easy; small, real actions matter more."
+    tags: ["virtue signaling", "virtue", "action", "authenticity", "hypocrisy", "behavior", "integrity", "results"]
+  - number: 136
+    keyword: "Forgive yourself,"
+    content: "as fiercely as you'd forgive a friend."
+    tags: ["self-forgiveness", "compassion", "friendship", "kindness", "mercy", "self-treatment", "healing", "grace"]
+  - number: 137
+    keyword: "Guilt won't save the planet."
+    content: "Individual action matters, but systemic change is always bigger than your carbon footprint."
+    tags: ["guilt", "climate", "individual action", "systemic change", "carbon footprint", "environmentalism", "scale", "effectiveness"]
+  - number: 138
+    keyword: "Practice letting go now,"
+    content: "because one day you'll have no choice. If you wait until the end, it's going to be much harder."
+    tags: ["letting go", "practice", "choice", "death", "preparation", "acceptance", "inevitability", "wisdom"]
+  - number: 139
+    keyword: "\"Crazy\" beliefs often serve a purpose."
+    content: "They create certainty, belonging, or status—even if they ignore facts."
+    tags: ["beliefs", "purpose", "certainty", "belonging", "status", "facts", "psychology", "function"]
+  - number: 140
+    keyword: "Balance compassion with boundaries,"
+    content: "or you'll end up burned out or alone."
+    tags: ["compassion", "boundaries", "burnout", "isolation", "balance", "self-care", "relationships", "sustainability"]
+  - number: 141
+    keyword: "Honesty means changing your mind,"
+    content: "when facts say so."
+    tags: ["honesty", "changing mind", "facts", "flexibility", "truth", "adaptation", "integrity", "evidence"]
+  - number: 142
+    keyword: "Hold beliefs lightly,"
+    content: "and let them evolve."
+    tags: ["beliefs", "flexibility", "evolution", "adaptability", "growth", "change", "openness", "learning"]
+  - number: 143
+    keyword: "\"Meritocracy\" is mostly myth."
+    content: "Upward mobility is rarer than we're told."
+    tags: ["meritocracy", "myth", "upward mobility", "inequality", "social mobility", "economics", "fairness", "reality"]
+  - number: 144
+    keyword: "People defend their group,"
+    content: "not just their ideas. Tribal loyalty is usually stronger than the desire to be right."
+    tags: ["group defense", "tribal loyalty", "ideas", "being right", "loyalty", "psychology", "tribalism", "motivation"]
+  - number: 145
+    keyword: "Most solutions are imperfect."
+    content: "Waiting for the \"perfect\" green lifestyle or policy is just another way to avoid action."
+    tags: ["solutions", "imperfection", "perfectionism", "green lifestyle", "policy", "action", "avoidance", "progress"]
+  - number: 146
+    keyword: "Doubt is a strength,"
+    content: "not a flaw, in science."
+    tags: ["doubt", "strength", "science", "skepticism", "inquiry", "questioning", "method", "virtue"]
+  - number: 147
+    keyword: "When the world feels upside-down,"
+    content: "start by asking what people are afraid of losing. Fear warps perception and logic."
+    tags: ["world chaos", "fear", "loss", "perception", "logic", "understanding", "psychology", "empathy"]
+  - number: 148
+    keyword: "You can burn out from too much positivity."
+    content: "Saying yes to everything is just another way to lose yourself."
+    tags: ["burnout", "positivity", "saying yes", "boundaries", "self-loss", "toxic positivity", "balance", "authenticity"]
+  - number: 149
+    keyword: "Today's power works through seduction,"
+    content: "not suppression; if you always \"choose\" to grind, ask who benefits."
+    tags: ["power", "seduction", "suppression", "grind culture", "choice", "benefits", "manipulation", "awareness"]
+  - number: 150
+    keyword: "Ethics isn't about looking good,"
+    content: "it's about doing right when nobody's watching."
+    tags: ["ethics", "appearance", "doing right", "integrity", "character", "morality", "authenticity", "virtue"]
+  - number: 151
+    keyword: "Be responsive,"
+    content: "not perfect."
+    tags: ["responsiveness", "perfectionism", "adaptability", "flexibility", "action", "improvement", "progress", "pragmatism"]
+  - number: 152
+    keyword: "History will judge today's \"normal\""
+    content: "as tomorrow's nonsense. Be humble about what you know for sure."
+    tags: ["history", "normal", "nonsense", "humility", "knowledge", "certainty", "perspective", "change"]
+  - number: 153
+    keyword: "Advertising sells identity,"
+    content: "not just stuff. You're being told what to want, not just what to buy."
+    tags: ["advertising", "identity", "consumption", "manipulation", "desire", "marketing", "self-image", "influence"]
+  - number: 154
+    keyword: "Real connection requires boundaries."
+    content: "Not every part of you has to be seen or shared."
+    tags: ["connection", "boundaries", "privacy", "intimacy", "authenticity", "relationships", "sharing", "self-protection"]
+  - number: 155
+    keyword: "To move forward,"
+    content: "stop clinging to how things \"should\" be— start working with what is."
+    tags: ["moving forward", "expectations", "reality", "acceptance", "pragmatism", "adaptation", "progress", "letting go"]
+  - number: 156
+    keyword: "Ritual is a doorway;"
+    content: "it signals to your brain that it's time to shift gears."
+    tags: ["ritual", "doorway", "brain", "shift", "transition", "signal", "psychology", "change"]
+  - number: 157
+    keyword: "Remember: resilience is collective."
+    content: "You don't have to carry it alone."
+    tags: ["resilience", "collective", "support", "community", "burden sharing", "strength", "connection", "mutual aid"]
+  - number: 158
+    keyword: "You can let go without resigning."
+    content: "Surrender to reality, but don't surrender your agency."
+    tags: ["letting go", "resignation", "surrender", "reality", "agency", "acceptance", "empowerment", "balance"]
+  - number: 159
+    keyword: "Acceptance clears the noise,"
+    content: "so you can act with clarity, not just react from frustration."
+    tags: ["acceptance", "clarity", "noise", "action", "reaction", "frustration", "peace", "effectiveness"]

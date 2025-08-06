@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wake Up; Do Something</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<!-- Cronitor RUM -->
+<script async src="https://rum.cronitor.io/script.js"></script>
+<script>
+    window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+    cronitor('config', { clientKey: '8bbd5493a7a393c6b0e8ba99b6b2d87b' });
+</script>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #00ff99;
+      font-family: 'Share Tech Mono', monospace;
+      line-height: 1.6;
+      padding: 2rem;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #ff0080;
+      text-shadow: 0 0 5px #ff0080, 0 0 10px #ff0080;
+      letter-spacing: 0.03em;
+    }
+    p.subtitle {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+      color: #ccc;
+      font-size: 1rem;
+    }
+    .content-wrapper {
+      max-width: 800px;
+      width: 100%;
+    }
+    .green {
+      color: #00ff99;
+    }
+    .tip-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+.tip-row {
+  display: flex;
+  align-items: stretch; /* ensures children fill height */
+  margin: 1.2rem 0;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  scroll-margin-top: 90px;
+}
+
+.tip-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;         /* decrease from 2.8rem */
+  max-width: 2.5rem;       /* prevents super wide boxes for big numbers */
+  width: 2.2rem;           /* fixed width, so less dominant */
+  font-size: 1.1rem;       /* smaller font */
+  font-weight: bold;
+  color: #fff;
+  background: #ff0080;
+  box-shadow: 0 0 8px #ff0080;
+  border-radius: 0;
+  margin-right: 0.6rem;
+  padding: 0;
+  font-family: inherit;
+  border-left: 3px solid #00ff99;   /* thinner border */
+  user-select: none;
+  align-self: stretch;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+}
+
+
+.tip {
+  flex: 1;
+  background: linear-gradient(135deg, #111 0%, #222 100%);
+  border-left: none;
+  padding: 1.5rem 1.2rem;
+  font-size: 1rem;
+  position: relative;
+  box-shadow: 0 0 10px #00ff99;
+  transition: transform 0.2s ease-in-out, background 0.2s;
+  display: block;
+  word-break: break-word;
+  min-height: 100%;
+}
+    .tip-row:hover .tip,
+    .tip-row:focus .tip {
+      transform: translateX(10px) scale(1.02);
+      background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+    }
+    .tip-strong {
+      color: #00ffff;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+    }
+    .tip-row.highlighted .tip {
+      background: linear-gradient(135deg, #181045 0%, #ff0080 100%);
+      color: #fff;
+      box-shadow: 0 0 25px #ff0080;
+      transition: background 0.5s, color 0.5s;
+    }
+    .glitch {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.01),
+        rgba(255, 255, 255, 0.01) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+      animation: flicker 0.15s infinite;
+      z-index: 1;
+    }
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 0.05;
+      }
+      20%, 22%, 24%, 55% {
+        opacity: 0.15;
+      }
+    }
+    .copy-notice {
+      position: fixed;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ff0080;
+      color: #fff;
+      padding: 0.8em 1.4em;
+      font-size: 1.1em;
+      font-family: inherit;
+      border-radius: 8px;
+      box-shadow: 0 0 15px #ff0080;
+      z-index: 10;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s;
+      letter-spacing: 0.04em;
+      font-weight: bold;
+    }
+    .copy-notice.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      color: #888;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+    }
+    .search-container {
+      margin-bottom: 2rem;
+    }
+    
+    .search-input {
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(135deg, #111 0%, #222 100%);
+      border: 2px solid #00ff99;
+      border-radius: 0;
+      color: #00ff99;
+      font-family: inherit;
+      font-size: 1rem;
+      box-shadow: 0 0 10px #00ff99;
+      outline: none;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    
+    .search-input:focus {
+      border-color: #ff0080;
+      box-shadow: 0 0 15px #ff0080;
+    }
+    
+    .search-input::placeholder {
+      color: #888;
+      font-style: italic;
+    }
+    
+    .no-results {
+      text-align: center;
+      color: #888;
+      font-size: 1.1rem;
+      margin: 3rem 0;
+      display: none;
+    }
+    
+    .tip-row.hidden {
+      display: none;
+    }
+    
+    @media (max-width: 600px) {
+      .tip-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .tip-number {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        min-width: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        align-self: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="glitch"></div>
+  <div id="copyNotice" class="copy-notice">Link copied!</div>
+  <h1>Wake Up<span class="green">;</span><br>Do Something</h1>
+  <p class="subtitle">Your guide to thinking straight and acting real when the world gets weird.</p>
+  <div class="content-wrapper">
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search tips..." id="searchInput">
+    </div>
+    <div class="no-results" id="noResults">No matches found.</div>
+    <ol class="tip-list" id="tipList">
+      {{TIPS_PLACEHOLDER}}
+    </ol>
+  </div>
+  <footer>
+    &copy; 2025 wuds.life &mdash; Built to interrupt your autopilot.
+  </footer>
+<script>
+  // Highlight tip if in hash
+  function highlightFromHash() {
+    document.querySelectorAll('.tip-row').forEach(t => t.classList.remove('highlighted'));
+    if (location.hash && /^\#\d+$/.test(location.hash)) {
+      let el = document.getElementById(location.hash.substring(1));
+      if (el) {
+        el.classList.add('highlighted');
+        el.scrollIntoView({behavior: "smooth", block: "center"});
+      }
+    }
+  }
+  highlightFromHash();
+  window.addEventListener('hashchange', highlightFromHash);
+
+  // Copy URL on click or enter
+  document.querySelectorAll('.tip-row').forEach(function(row) {
+    row.addEventListener('click', function(e) {
+      let tipId = row.id;
+      let base = window.location.href.split('#')[0];
+      let url = `${base}#${tipId}`;
+      navigator.clipboard.writeText(url).then(() => showNotice());
+      // DON'T set location.hash here! Instead:
+      history.replaceState(null, null, `#${tipId}`); // updates the hash but doesn't jump
+      document.querySelectorAll('.tip-row').forEach(t => t.classList.remove('highlighted'));
+      row.classList.add('highlighted');
+      row.scrollIntoView({behavior: "smooth", block: "center"});
+      row.focus();
+      e.preventDefault();
+    });
+    row.addEventListener('keydown', function(e) {
+      if (e.key === "Enter" || e.key === " ") {
+        let tipId = row.id;
+        let base = window.location.href.split('#')[0];
+        let url = `${base}#${tipId}`;
+        navigator.clipboard.writeText(url).then(() => showNotice());
+        history.replaceState(null, null, `#${tipId}`);
+        document.querySelectorAll('.tip-row').forEach(t => t.classList.remove('highlighted'));
+        row.classList.add('highlighted');
+        row.scrollIntoView({behavior: "smooth", block: "center"});
+        row.focus();
+        e.preventDefault();
+      }
+    });
+  });
+
+  function showNotice() {
+    const notice = document.getElementById('copyNotice');
+    notice.classList.add('visible');
+    clearTimeout(window._noticeTimeout);
+    window._noticeTimeout = setTimeout(() => {
+      notice.classList.remove('visible');
+    }, 1500);
+  }
+
+  // Search functionality
+  function searchTips() {
+    const searchInput = document.getElementById('searchInput');
+    const tipList = document.getElementById('tipList');
+    const noResults = document.getElementById('noResults');
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    const allTips = tipList.querySelectorAll('.tip-row');
+    
+    let visibleCount = 0;
+    
+    allTips.forEach(tip => {
+      const tipContent = tip.textContent.toLowerCase();
+      const tipTags = (tip.getAttribute('data-tags') || '').toLowerCase();
+      const searchableContent = tipContent + ' ' + tipTags;
+      
+      if (searchTerm === '' || searchableContent.includes(searchTerm)) {
+        tip.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        tip.classList.add('hidden');
+      }
+    });
+    
+    // Show/hide no results message
+    if (visibleCount === 0 && searchTerm !== '') {
+      noResults.style.display = 'block';
+    } else {
+      noResults.style.display = 'none';
+    }
+  }
+  
+  // Bind search event listener
+  document.getElementById('searchInput').addEventListener('input', searchTips);
+</script>
+
+</body>
+</html>
