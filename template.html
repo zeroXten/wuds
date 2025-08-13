@@ -153,44 +153,23 @@
   fill: #ff0080;
 }
 
-.tip-number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 2rem;         /* decrease from 2.8rem */
-  max-width: 2.5rem;       /* prevents super wide boxes for big numbers */
-  width: 2.2rem;           /* fixed width, so less dominant */
-  font-size: 1.1rem;       /* smaller font */
-  font-weight: bold;
-  color: #fff;
-  background: #ff0080;
-  box-shadow: 0 0 8px #ff0080;
-  border-radius: 0;
-  margin-right: 0.6rem;
-  padding: 0;
-  font-family: inherit;
-  border-left: 3px solid #00ff99;   /* thinner border */
-  user-select: none;
-  align-self: stretch;
-  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
-}
+/* Tip number styling removed - now using pink accent border */
 
 
 .tip {
   flex: 1;
   background: linear-gradient(135deg, #111 0%, #222 100%);
-  border-left: none;
+  border-left: 3px solid #ff0080;
   padding: 1.5rem 1.2rem;
   font-size: 1rem;
   position: relative;
-  box-shadow: 0 0 10px #00ff99;
+  box-shadow: -2px 0 5px #ff0080, 0 -2px 5px #00ff99, 0 2px 5px #00ff99;
   transition: transform 0.2s ease-in-out, background 0.2s;
   display: block;
   word-break: break-word;
   min-height: 100%;
 }
-    .tip-content:hover .tip,
-    .tip-row:focus .tip {
+    .tip-content:hover .tip {
       transform: translateX(10px) scale(1.02);
       background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
     }
@@ -305,14 +284,7 @@
         flex-direction: column;
         align-items: stretch;
       }
-      .tip-number {
-        margin-right: 0;
-        margin-bottom: 0.5rem;
-        min-width: 2rem;
-        width: 2.5rem;
-        height: 2.5rem;
-        align-self: flex-start;
-      }
+      /* Mobile tip number styling removed */
       .social-icons {
         justify-content: center;
         margin-top: 0.8rem;
@@ -339,6 +311,21 @@
     <a href="https://forms.gle/aqiNgjaA2v7rBHu27" target="_blank" rel="noopener" style="color: #00ffff; text-decoration: underline; margin-top: 0.5rem; display: inline-block;">Feedback & Suggestions</a>
   </footer>
 <script>
+  // Randomize tips on page load
+  function randomizeTips() {
+    const tipList = document.getElementById('tipList');
+    const tips = Array.from(tipList.children);
+    
+    // Fisher-Yates shuffle
+    for (let i = tips.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [tips[i], tips[j]] = [tips[j], tips[i]];
+    }
+    
+    // Re-append in new order
+    tips.forEach(tip => tipList.appendChild(tip));
+  }
+  
   // Highlight tip if in hash
   function highlightFromHash() {
     document.querySelectorAll('.tip-row').forEach(t => t.classList.remove('highlighted'));
@@ -350,7 +337,13 @@
       }
     }
   }
-  highlightFromHash();
+  
+  // Initialize on load
+  document.addEventListener('DOMContentLoaded', function() {
+    randomizeTips();
+    highlightFromHash();
+  });
+  
   window.addEventListener('hashchange', highlightFromHash);
 
   // Copy URL on click or enter

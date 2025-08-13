@@ -49,7 +49,6 @@ def generate_tip_html(tip):
     
     return f'''      <li class="tip-row" id="{number}" tabindex="0"{tags_attr}>
         <div class="tip-content">
-          <span class="tip-number">{number}</span>
           <div class="tip"><span class="tip-strong">{keyword}</span> {content}</div>
         </div>{social_icons}
       </li>'''

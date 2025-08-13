@@ -529,7 +529,7 @@ tips:
     tags: ["science", "bias", "perfection", "improvement", "objectivity", "method", "progress", "fallibility"]
   - number: 133
     keyword: "Wisdom balances humility with realism."
-    content: ""
+    content: "It knows you can be wrong without assuming you always are."
     tags: ["wisdom", "humility", "realism", "balance", "knowledge", "perspective", "truth", "understanding"]
   - number: 134
     keyword: "Lead with compassion,"
@@ -655,3 +655,51 @@ tips:
     keyword: "Freedom isn't found in being important"
     content: "- it's in letting go of needing to be important."
     tags: ["freedom", "importance", "letting go", "ego", "liberation", "attachment", "peace", "authenticity"]
+  - number: 165
+    keyword: "Bite into a sandwich,"
+    content: "and you're biting into farms, trucks, shops, and centuries of human work."
+    tags: ["interconnection", "food", "supply chain", "gratitude", "systems", "human effort", "appreciation", "perspective"]
+  - number: 166
+    keyword: "A forest is not a collection of trees"
+    content: "— it's a living network of roots, fungi, water, air, and time."
+    tags: ["systems thinking", "nature", "interconnection", "ecology", "networks", "complexity", "holistic", "environment"]
+  - number: 167
+    keyword: "Something might not be true,"
+    content: "but there could still be truth in it."
+    tags: ["truth", "nuance", "wisdom", "partial truth", "perspective", "complexity", "understanding", "philosophy"]
+  - number: 168
+    keyword: "Some truths are subjective,"
+    content: "some are inter-subjective, and others are objective. Gravity doesn't care about your opinion."
+    tags: ["truth", "objectivity", "subjectivity", "reality", "philosophy", "epistemology", "gravity", "facts"]
+  - number: 169
+    keyword: "The fear of death drives more of human behaviour"
+    content: "than we admit - from ambition to war to fashion."
+    tags: ["death", "fear", "mortality", "behavior", "ambition", "war", "fashion", "psychology"]
+  - number: 170
+    keyword: "We cling to symbols"
+    content: "- fame, legacy, identity - as if they'll outlast us."
+    tags: ["symbols", "fame", "legacy", "identity", "impermanence", "attachment", "mortality", "illusion"]
+  - number: 171
+    keyword: "The human brain gave us the power"
+    content: "to see ourselves in time - and with it, the knowledge that our time will end."
+    tags: ["consciousness", "time", "mortality", "awareness", "human brain", "existentialism", "death awareness", "cognition"]
+  - number: 172
+    keyword: "Every society tells a story"
+    content: "- where you came from, how to live, and why it matters."
+    tags: ["society", "narrative", "meaning", "culture", "story", "purpose", "belonging", "identity"]
+  - number: 173
+    keyword: "Thinking about death makes us harsher"
+    content: "toward those who break our values - and warmer toward those who follow them."
+    tags: ["death", "values", "judgment", "in-group", "out-group", "mortality salience", "psychology", "behavior"]
+  - number: 174
+    keyword: "Most people aren't evil;"
+    content: "they're acting from a limited view of the world."
+    tags: ["evil", "perspective", "limited view", "understanding", "compassion", "worldview", "judgment", "empathy"]
+  - number: 175
+    keyword: "Ignorance feeds suffering"
+    content: "— when we can't see reality clearly, we stumble into harm for ourselves and others."
+    tags: ["ignorance", "suffering", "reality", "clarity", "harm", "awareness", "understanding", "wisdom"]
+  - number: 176
+    keyword: "Seeing through the self doesn't erase you;"
+    content: "it frees you from defending what was never solid."
+    tags: ["self", "ego", "freedom", "defense", "identity", "Buddhism", "liberation", "illusion"]
